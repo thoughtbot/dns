@@ -1,14 +1,8 @@
-% Your Title Goes Here
-% Author Name
+% Domain Name Sanity
+% Edward Loveall
 
 \clearpage
 
-An introduction chapter
+# Registering A New Domain
 
-\mainmatter
-
-\part{First Part}
-
-# Chapter One
-
-Here's some text for the first chapter.
+<<[chapters/registering-a-new-domain.md]
