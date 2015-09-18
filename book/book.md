@@ -2,6 +2,7 @@
 % Edward Loveall
 
 \clearpage
+\mainmatter
 
 # Registering A New Domain
 
