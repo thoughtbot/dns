@@ -54,7 +54,7 @@ After signing up for an account, entering our credit card info, and agreeing to 
 
 #### Privacy vs legal concerns
 
-We may not want to put that information on the internet, which is understandable. You could use non-personal email addresses, PO boxes, and fake phone numbers, but that sounds like a lot of work for a simple domain name. Many registrars offer what's called WHOIS privacy where they will list obscuring information such as _their_ contact info instead. This can be a nice alternative. One disadvantage is that this info can be used to determine who has rights to a domain, so if our info isn't there, it can be harder to prove that we own it.
+We may not want to put that information on the internet, which is understandable. We could use non-personal email addresses, PO boxes, and fake phone numbers, but that sounds like a lot of work for a simple domain name. Many registrars offer what's called WHOIS privacy where they will list obscuring information such as _their_ contact info instead. This can be a nice alternative. One disadvantage is that this info can be used to determine who has rights to a domain, so if our info isn't there, it can be harder to prove that we own it.
 
 For example, there was a registry which shut down because of corrupt leadership. One owner spent thousands of dollars of customer money on liposuction, escorts, and a chihuahua. As ridiculous as that sounds customers who had WHOIS privacy enabled couldn't prove that they had rights to their domains as the site slowly imploded. This is a worst case scenario, but it's important to be aware of the potential tradeoffs of WHOIS privacy.
 
