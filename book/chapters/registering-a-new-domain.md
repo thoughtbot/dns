@@ -2,7 +2,7 @@ Registering a domain isn't the simplest process. Which like, duh that's probably
 
 ### Step one – Figure out if the domain is already taken
 
-Let's say we want the domain `petrock.com`. To register that name, we need to know if it's already taken. We could go visit the domain in our web browser and see if a website appears. But even if there's no website, that doesn't necessarily mean it's not taken. Another way is to go to a domain registrar, type in the domain and see if it's taken or not. There's a catch though: _domain name front running_. That is, when a company registers domains after people have used their search tools. Some registrars have [been caught](http://www.domainstate.com/industry-news-6/beware-dont-search-for-names-at-networksolutions-c-85864.html?s=) doing this very thing.
+Let's say we want the domain `petrock.com`. To register that name, we need to know if it's already taken. We could go visit the domain in our web browser and see if a website appears. But even if there's no website, that doesn't necessarily mean it's not registered. Another way is to go to a domain registrar, type in the domain and see if it's taken or not. There's a catch though: _domain name front running_. That is, when a company registers domains after people have used their search tools. Some registrars have [been caught](http://www.domainstate.com/industry-news-6/beware-dont-search-for-names-at-networksolutions-c-85864.html?s=) doing this very thing.
 
 So how can we make sure that doesn't happen? We can skip the registrar all together by using the command line utility `whois`:
 
