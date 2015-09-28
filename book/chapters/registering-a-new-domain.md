@@ -12,17 +12,17 @@ whois petrock.com
 
 `whois` (pronouced "who is") is a tool for getting information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we just get the ability to rent it for some amount of time. Confusingly, the protocol for getting WHOIS information is also called WHOIS but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
 
-Using the command line tool isn't the only way, however. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html). In spite of being updated in 2001, it continues to hold strong to the design aesthetic of the early 90s. It supports domains ending in `.aero`, `.arpa`, `.asia`, `.biz`, `.cat`, `.com`, `.coop`, `.edu`, `.info`, `.int`, `.jobs`, `.mobi`, `.museum`, `.name`, `.net`, `.org`, `.pro`, and `.travel`.
+Using the command line tool isn't the only way, however. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html). In spite of being updated in 2001, it continues to hold strong to the design aesthetic of the early 90s. The only caveat is it only supports certain domains, mostly the more common domains like `.com`, `.net`, `.org`, etc.
 
-From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to read and isn't totally. If you're curious, check out [TODO: relevant FAQ/appendix to be written].
+From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to read and isn't technically accurate. If you're curious, check out [TODO: relevant FAQ/appendix to be written].
 
-If `petrock.com` is taken, we have to look for a different domain. Let's try `petrock.dentist` instead. If we're trying to get WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. To do that visit the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can use it with the `-h` option with `whois`:
+If `petrock.com` is taken, we have to look for a different domain. Let's try `petrock.dentist` instead. If we're trying to get WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. To do that visit the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
 
 ```
 whois -h whois.rightside.co petrock.dentist
 ```
 
-We'll get back a bunch of text. We're looking for something that in so many words says _We have no record of this domain so therefore it's open for registration._ There's no standard for what WHOIS needs to return. But generally we're looking for something like `No match for "EXAMPLE.COM"` or `No entries found`.
+Either way, we'll get back a bunch of text. Since there's no standard for what WHOIS returns, this could be anything. We're looking for text that in so many words says _We have no record of this domain so therefore it's open for registration._ Common ways to phrase this are: `No match for "EXAMPLE.COM"` or `No entries found`.
 
 We'll fill out our own WHOIS information later on.
 
