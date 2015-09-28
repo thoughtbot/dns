@@ -44,6 +44,8 @@ Many registrars offer other features beyond getting a domain name for you. Some 
 
 Most of these options are personal preference and none of them are critical. It's hard to know exactly what you'll need in the future, but hopefully this gives you an idea of what to look for as you research.
 
+If you're a bit overwhelmed now and just want a suggestion, here are some of my favorites: [TODO: relevant FAQ/appendix list of registrars]
+
 ### Step three – Buy the domain
 
 The price for a single domain can range from free, all the way up to $100+/year. Some registrars charge monthly for other niceties. There's no standard and they can charge (or not charge) whatever they want. There are some commonalities among registrars however. Long existing domains like `com`, `net`, and `org` are usually pretty cheap, while newer or specialized domains like `luxury` , `pizza`, and `loans` generally cost more, similar to their real-world counterparts.
