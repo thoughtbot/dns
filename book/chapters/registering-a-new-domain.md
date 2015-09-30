@@ -12,7 +12,7 @@ whois petrock.com
 
 `whois` (pronouced "who is") is a tool for getting information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we just get the ability to rent it for some amount of time. Confusingly, the protocol for getting WHOIS information is also called WHOIS but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
 
-Using the command line tool isn't the only way, however. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html). In spite of being updated in 2001, it continues to hold strong to the design aesthetic of the early 90s. The only caveat is it only supports certain domains, mostly the more common domains like `.com`, `.net`, `.org`, etc.
+Using the command line tool isn't the only way, however. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html) a site that continues to hold strong to the design aesthetic of the early 90s. The only caveat of the service is it only supports certain domains, mostly the more common domains like `.com`, `.net`, `.org`, etc.
 
 From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to read and isn't technically accurate. If you're curious, check out [TODO: relevant FAQ/appendix to be written].
 
