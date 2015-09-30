@@ -48,7 +48,7 @@ If you're a bit overwhelmed now and just want a suggestion, here are some of my 
 
 ### Step three – Buy the domain
 
-The price for a single domain can range from free, all the way up to $100+/year. Some registrars charge monthly for other niceties. There's no standard and they can charge (or not charge) whatever they want. There are some commonalities among registrars however. Long existing domains like `com`, `net`, and `org` are usually pretty cheap, while newer or specialized domains like `luxury` , `pizza`, and `loans` generally cost more, similar to their real-world counterparts.
+The price for a single domain can range from free, all the way up to $100+/year. Some registrars charge monthly for other niceties. There's no standard and they can charge (or not charge) whatever they want. There are some commonalities among registrars however. Long existing domains like `com`, `net`, and `org` are usually pretty cheap, around $10, while newer or specialized domains like `luxury` , `pizza`, and `loans` generally cost more, similar to their real-world counterparts.
 
 ### Step four – Complete WHOIS information
 
