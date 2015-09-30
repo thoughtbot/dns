@@ -40,7 +40,7 @@ The control panel is where we will spend the most time with a registrar, so it's
 
 #### Other features
 
-Many registrars offer other features beyond getting a domain name for you. Some offer email, web hosting, or DNS management (technically separate from domain registration). Some offer one-click setup to get your domain setup with your favorite services. There are even websites that just _give_ you a domain for free when you purchase their other services. Other websites will totally scam you. (Note: This is not usually a desired feature.)
+Many registrars offer other features beyond getting a domain name for you. Some offer email, web hosting, or DNS management (technically separate from domain registration). Some offer one-click setup to get your domain setup with your favorite services. There are even services that just _give_ you a domain for free when you purchase their other services. Others will totally scam you. (Note: This is not usually a desired feature.)
 
 Most of these options are personal preference and none of them are critical. It's hard to know exactly what you'll need in the future, but hopefully this gives you an idea of what to look for as you research.
 
