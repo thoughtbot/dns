@@ -1,6 +1,6 @@
 ### MX
 
-These are for email. Just like how A or CNAME records point to a website, MX records are how email knows where to go on the internet. If you break apart an email address like `sales@donkeyrentals.com`, we have two parts: `sales` and `donkeyrentals.com`. We're just here to concern ourselves with the second part: `donkeyrentals.com`.
+These are for email and MX stands for Mail eXchange (the X looks cooler that way). Just like how A or CNAME records point to a website, MX records are how email knows where to go on the internet. If you break apart an email address like `sales@donkeyrentals.com`, we have two parts: `sales` and `donkeyrentals.com`. We're just here to concern ourselves with the second part: `donkeyrentals.com`.
 
 Whoever runs your mail server (Gmail, Fastmail, etc.) will have a list of servers you need to make MX records for. First, let's try to set one up:
 
