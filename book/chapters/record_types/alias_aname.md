@@ -6,13 +6,21 @@ There is a way to point the apex domain to a non-address record if we need to. "
 
 Even so, they can be useful. For example I mentioned that [Heroku](https://devcenter.heroku.com/articles/custom-domains#add-a-custom-root-domain) makes use of this feature to let us point our apex domain our Heroku app.
 
-Since these aren't the same across the board I can't promise this is how you'll have to set one up. But it will likely work something like:
+Since these aren't the same across the board I can't promise this is how we'll have to set one up. But it will likely work something like:
 
 * **Hostname**: `@`
 * **Record Type**: `ALIAS`
 * **Target Host**: `someotherwebsite.com`
 
-And if we want to test it with `dig`, well... we can try:
+When we want to test our setup, if we're lucky, our DNS provider will let us ask it about ALIAS or ANAME records directly:
+
+```shell
+$ dig donkeyrentals.com ALIAS +short
+
+82.144.121.97
+```
+
+But again, I'll stress that these are not standard record types, so we may have to result to alternate methods:
 
 ```shell
 $ dig donkeyrentals.com TXT +short
@@ -20,4 +28,5 @@ $ dig donkeyrentals.com TXT +short
 "ALIAS for someotherwebsite.com"
 ```
 
-Notice I looked for a TXT record here. That might be how you have to find it, but it might be something else entirely! That's the brave new world of non-standard records. Exciting no? _ALIAS records. Coming to a theater near you._
+Notice we looked for a TXT record here. That's how DNSimple does it but it might work some other way entirely! That's the brave new world of non-standard records. Exciting no? _ALIAS records. Coming to a theater near you._
+
