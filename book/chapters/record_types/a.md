@@ -8,7 +8,7 @@ Here's an example of how we could configure an A record:
 * **Record Type**: `A`
 * **IP Address**: `93.184.216.34`
 
-The `@` symbol means **apex domain**, also called the bare, top, root, or naked domain. It's a fancy way to refer the domain with anything in front of it. I.e `donkeyrentals.com` as opposed to `www.donkeyrentals.com`. Sometimes, you specify the apex domain by putting simply nothing for the hostname but I'll be using `@` throughout the book.
+The `@` symbol means **apex domain**, also called the bare, top, root, or naked domain. It's a fancy way to refer to the domain without anything in front of it. I.e `donkeyrentals.com` as opposed to `www.donkeyrentals.com`. Sometimes, you specify the apex domain by putting simply nothing for the hostname but I'll be using `@` throughout the book.
 
 Once that's set up, we can check our work by using `dig`:
 
