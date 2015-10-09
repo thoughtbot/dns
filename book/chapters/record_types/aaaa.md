@@ -15,5 +15,3 @@ $ dig donkeyrentals.com AAAA +short
 ```
 
 As the internet [runs out](http://www.bbc.com/news/technology-19600718) of IPv4 addresses, IPv6 is becoming more and more important. Soon you might not even be able to use an IPv4.
-
-For the curious, you can visit IPv6 addresses in your browser by surrounding them with square brackets: `http://[2620:0:861:ed1a::1]`. Again, just like with an IPv4 address this may not take you anywhere, but if for some reason you need to visit one, that's how.
