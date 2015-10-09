@@ -26,7 +26,7 @@ $ dig redirect.donkeyrentals.com CNAME +short
 rabbitrentals.com.
 ```
 
-See what we did there? Now when people try to visit `redirect.donkeyrentals.com`, they get _hopped_ over (see what I did there?) to our competitors site.
+Now when people try to visit `redirect.donkeyrentals.com`, they get _hopped_ over (see what I did there?) to our competitors site.
 
 #### When To Use CNAMEs
 
