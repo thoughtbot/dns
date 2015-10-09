@@ -30,7 +30,7 @@ See what we did there? Now when people try to visit `redirect.donkeyrentals.com`
 
 #### When To Use CNAMEs
 
-Why would we use a CNAME record as opposed to an A? Well, for the most part, you wouldn't. A records are highly preferred because they are much more direct. When your browser sees an A record, it gets an IP address. That's it. Requesting a CNAME record is different. It looks up the record, sees that it's a CNAME, looks what the record is pointing toward, and then _restarts_ the request. This will make requests take longer to get to our final, glorious website.
+Why would we use a CNAME record as opposed to an A? Well, for the most part, you wouldn't. A records are highly preferred because they are much more direct. When your browser sees an A record, it gets an IP address. That's it. Requesting a CNAME record is different. It looks up the record, sees that it's a CNAME, looks what the record is pointing toward, and then _restarts_ the request. This will make requests take longer to get to our final, glorious IP address.
 
 CNAMEs also have limits. For example, we can't use a CNAME record on the apex domain. If you want to point the plain `donkeyrentals.com` to another domain with DNS, you're out of luck (with the exception of ALIAS records, see below). Also CNAME records can never exist with other record types for the same hostname. Imagine our `www` pointing to `rabbitrentals.com` with a CNAME record, and _also_ to our server's IP address with an A record. We have no way of knowing whether to use the CNAME record or A record, and each could have different outcomes. Another gotcha is that CNAMEs can't exist on the apex (`@`) domain, only subdomains.
 
