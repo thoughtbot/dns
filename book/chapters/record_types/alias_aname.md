@@ -4,7 +4,7 @@ There is a way to point the apex domain to a non-address record if we need to. "
 
 [DNSimple](http://support.dnsimple.com/articles/alias-record/) is using TXT records to point apex domains just like a CNAME would. They call this an ALIAS record. [DNS Made Easy](http://help.dnsmadeeasy.com/managed-dns/records/aname-records/) has a similar feature called ANAMEs. I want to make it clear that these are non-standard uses of DNS technology only available with some registrars. Different registrars call them different things and don't all work the same way. They make me nervous.
 
-Even so, they can be useful. Before I mentioned that [Heroku](https://devcenter.heroku.com/articles/custom-domains#add-a-custom-root-domain). They make use of this feature if you want your apex domain to point toward your Heroku app.
+Even so, they can be useful. For example I mentioned that [Heroku](https://devcenter.heroku.com/articles/custom-domains#add-a-custom-root-domain) makes use of this feature to let us point our apex domain our Heroku app.
 
 Since these aren't the same across the board I can't promise this is how you'll have to set one up. But it will likely work something like:
 
