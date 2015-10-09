@@ -34,4 +34,4 @@ $ dig accessories.donkeyrentals.com A +short
 93.184.216.34
 ```
 
-After we have both A records set up, we have an example of more than one website hosted at the same IP address. Our main corporate enterprise's website is `donkeyrentals.com`. For things like diamond-studded horseshoes or whatever we have our accessories site which is at `accessories.donkeyrentals.com`. We host both websites at `93.184.216.34`, but each have different content.
+After we have both A records set up, we have an example of more than one website hosted at the same IP address. Our main corporate enterprise's website is `donkeyrentals.com`. For things like diamond-studded donkeyshoes or whatever we have our accessories site which is at `accessories.donkeyrentals.com`. We host both websites at `93.184.216.34`, but each have different content.
