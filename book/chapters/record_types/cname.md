@@ -42,6 +42,6 @@ There's a lot of confusion on what a CNAME is vs a Subdomain. At least there was
 
 We might talk about `www` as a subdomain of `donkeyrentals.com` or as a CNAME record for the `donkeyrentals.com` domain. But which one is it?
 
-Technically, `www` by itself is a hostname. Hostnames are not subdomains or CNAME records. The subdomain is the full `www.donkeyrentals.com` and `www` is the hostname at the beginning. (Note:  It's common to call `www` the subdomain even if that's technically incorrect.)
+[Technically](https://tools.ietf.org/html/rfc882#page-9), `www` by itself is a hostname (referred to in the RFC with a space as in "host name"). Hostnames are not subdomains or CNAME records. The [subdomain](https://tools.ietf.org/html/rfc882#page-7) is the full `www.donkeyrentals.com` and `www` is the hostname at the beginning. (Note:  It's common to call `www` the subdomain even if that's technically incorrect.)
 
 There's _also_ the `www` entry in our domain's DNS records. It's not unusual for this to be a CNAME record but it doesn't need to be. We can have `www` be an A record, or NS record, or any kind of record. Speaking of NS records...
