@@ -7,7 +7,7 @@ Let's say we want the domain `donkeyrentals.com`. To register that name, we need
 So how can we make sure that doesn't happen? We can skip the registrar all together by using the command line utility `whois`:
 
 ```shell
-whois donkeyrentals.com
+$ whois donkeyrentals.com
 ```
 
 `whois` (pronounced "who is") is a tool for retrieving information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we're just renting it for some amount of time. Confusingly, the protocol for WHOIS information is also called WHOIS, but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
@@ -19,7 +19,7 @@ From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to
 If `donkeyrentals.com` is taken, we have to look for a different domain. Let's try `donkeyrentals.dentist` instead. If we're trying to retrieve WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. So we go to the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
 
 ```shell
-whois -h whois.rightside.co donkeyrentals.dentist
+$ whois -h whois.rightside.co donkeyrentals.dentist
 ```
 
 Either way, we'll receive a bunch of text. There's no standard for what WHOIS returns, this could be any text. We're looking for text that in so many words says _We have no record of this domain so therefore it's open for registration._ Common ways to phrase this are: `No match for "EXAMPLE.COM"` or `No entries found`.
