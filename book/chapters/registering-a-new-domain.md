@@ -10,7 +10,7 @@ So how can we make sure that doesn't happen? We can skip the registrar all toget
 $ whois donkeyrentals.com
 ```
 
-`whois` (pronounced "who is") is a tool for retrieving information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we're just renting it for some amount of time. Confusingly, the protocol for WHOIS information is also called WHOIS, but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
+`whois` (pronounced "who is") is a tool for retrieving information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we're just leaseing it for some amount of time. Confusingly, the protocol for WHOIS information is also called WHOIS, but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
 
 Using the command line tool isn't the only way. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html) a site that continues to hold strong to the design aesthetic of the early 90's. The only caveat of the service is it only supports certain domains, mostly the more common domains such as `.com`, `.net`, `.org`, etc.
 
@@ -28,7 +28,7 @@ We'll fill out our own WHOIS information later on.
 
 ### Step two – Find a Registrar
 
-Now that we know our domain is available, we need to rent it from a registrar. Picking a registrar is mostly a personal preference, here's what I personally look for:
+Now that we know our domain is available, we need to lease it from a registrar. Picking a registrar is mostly a personal preference, here's what I personally look for:
 
 #### Wide selection of top-level domains
 
@@ -46,7 +46,7 @@ Most of these options are personal preference and none of them are critical. It'
 
 If you're a bit overwhelmed now and just want a suggestion, here are some of my favorites: [TODO: relevant FAQ/appendix list of registrars]
 
-### Step three – Rent the domain
+### Step three – Lease the domain
 
 The price for a single domain can range from free, all the way up to $100+/year. Some registrars charge monthly for other niceties. There's no standard, and they can charge (or not charge) whatever they want. There are some commonalities among registrars however. Long existing domains like `com`, `net`, and `org` are usually pretty cheap, around $10, while newer or specialized domains like `luxury` and `loans` generally cost more, similar to their real-world counterparts.
 
