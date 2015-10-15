@@ -1,6 +1,6 @@
 ### AAAA
 
-Pronounced like screaming _"AAAAAHHHH!!!!"_, these records are _just_ like A records only they point to an IPv6 address instead. IPv6 addresses look something like this: `2620:0:861:ed1a::1`. Other than being longer and harder to type, they serve pretty much exactly the same function as IPv4; pointing our domain toward a server.
+These records are the same as A records with one exception: they point to an IPv6 address instead of an IPv4. IPv6 addresses look something like this: `2620:0:861:ed1a::1`. Other than being longer and harder to type, they serve the same function as IPv4; to be an address for our server. Technically, these are pronounced as "_quad-A_" records, but I always scream "_AAAAAHHHH!!!!_" in my head.
 
 Here's an example configuration:
 
