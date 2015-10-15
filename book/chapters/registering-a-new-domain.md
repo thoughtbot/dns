@@ -2,7 +2,7 @@ Registering a domain isn't the simplest process. Which like, duh that's probably
 
 ### Step one – Figure out if the domain is already taken
 
-Let's say we want the domain `petrock.com`. To register that name, we need to know if it's already taken. We could go visit the domain in our web browser and see if a website appears. But even if there's no website, that doesn't necessarily mean it's not registered. Another way is to go to a domain registrar, type in the domain and see if it's taken or not. There's a catch though: _domain name front running_. That is, when a company registers a domain out from under users after they have searched for it. Some registrars have [been caught](http://www.domainstate.com/industry-news-6/beware-dont-search-for-names-at-networksolutions-c-85864.html?s=) doing this very thing.
+Let's say we want the domain `petrock.com`. To register that name, we need to know if it's already taken. We could go visit the domain in our web browser and see if a website appears. But even if there's no website, that doesn't necessarily mean it's not registered. Another way is to go to a domain registrar, type in the domain and see if it's taken or not. There's a catch though: _domain name front running_. That is, when a company registers a domain out from under users after they have searched for it. Some registrars have [been caught](http://www.domainstate.com/industry-news-6/beware-dont-search-for-names-at-networksolutions-c-85864.html?s=) doing this.
 
 So how can we make sure that doesn't happen? We can skip the registrar all together by using the command line utility `whois`:
 
@@ -10,25 +10,25 @@ So how can we make sure that doesn't happen? We can skip the registrar all toget
 whois petrock.com
 ```
 
-`whois` (pronouced "who is") is a tool for getting information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we just get the ability to rent it for some amount of time. Confusingly, the protocol for getting WHOIS information is also called WHOIS but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
+`whois` (pronouced "who is") is a tool for retrieving information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we're just renting it for some amount of time. Confusingly, the protocol for WHOIS information is also called WHOIS but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
 
 Using the command line tool isn't the only way, however. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html) a site that continues to hold strong to the design aesthetic of the early 90s. The only caveat of the service is it only supports certain domains, mostly the more common domains like `.com`, `.net`, `.org`, etc.
 
 From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to read and isn't technically accurate. If you're curious, check out [TODO: relevant FAQ/appendix to be written].
 
-If `petrock.com` is taken, we have to look for a different domain. Let's try `petrock.dentist` instead. If we're trying to get WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. To do that visit the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
+If `petrock.com` is taken, we have to look for a different domain. Let's try `petrock.dentist` instead. If we're trying to retrieve WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. To do that visit the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
 
 ```
 whois -h whois.rightside.co petrock.dentist
 ```
 
-Either way, we'll get back a bunch of text. Since there's no standard for what WHOIS returns, this could be anything. We're looking for text that in so many words says _We have no record of this domain so therefore it's open for registration._ Common ways to phrase this are: `No match for "EXAMPLE.COM"` or `No entries found`.
+Either way, we'll receive a bunch of text. Since there's no standard for what WHOIS returns, this could be any text. We're looking for text that in so many words says _We have no record of this domain so therefore it's open for registration._ Common ways to phrase this are: `No match for "EXAMPLE.COM"` or `No entries found`.
 
 We'll fill out our own WHOIS information later on.
 
 ### Step two – Find a Registrar
 
-Now that we know our domain is available, we need a registrar to help us get it. Picking a registrar is mostly a personal preference, here's what I personally look for:
+Now that we know our domain is available, we need to rent it from a registrar. Picking a registrar is mostly a personal preference, here's what I personally look for:
 
 #### Wide selection of top-level domains
 
@@ -36,11 +36,11 @@ With so many top-level domains (TLDs) like `com`, `io`, `co`, and `equipment` we
 
 #### A nice control panel
 
-The control panel is where we will spend the most time with a registrar, so it's worth researching. This is super important, but harder to know beforehand. Most sites will have a nice landing page, but some may be hiding a crap control behind it. Ideally we can find screenshots of the control panel or get a demo/trial. There's probably nothing _perfect_ out there, but if it looks like the registrar has never heard of a web designer, we may want to reconsider.
+The control panel is where we will spend the most time with a registrar, so it's worth researching. This is super important, but harder to know beforehand. Most sites will have a nice landing page, but some may be hiding a crap control behind it. Ideally we can find screenshots of the control panel or use a demo/trial. There's probably no _perfect_ registrar out there, but if it looks like the registrar has never heard of a web designer, we may want to reconsider.
 
 #### Other features
 
-Many registrars offer other features beyond getting a domain name for you. Some offer email, web hosting, or DNS management (technically separate from domain registration). Some offer one-click setup to get your domain setup with your favorite services. There are even services that just _give_ you a domain for free when you purchase their other services. Others will totally scam you. (Note: This is not usually a desired feature.)
+Many registrars offer features beyond domain name administration. Some offer email, web hosting, or DNS management (technically separate from domain registration). Some offer one-click configuration to set up your domain with your favorite services. There are even services that just _give_ you a domain for free when you purchase their other services. Others will totally scam you. (Note: This is not usually a desired feature.)
 
 Most of these options are personal preference and none of them are critical. It's hard to know exactly what you'll need in the future, but hopefully this gives you an idea of what to look for as you research.
 
@@ -62,4 +62,4 @@ For example, there was a registry which shut down because of corrupt leadership.
 
 ### Next steps
 
-Now that we have a domain to play with, we can start talking about all the other configuration options available to us. SSL certificates, email, subdomains, etc. Right now, the most important thing we should be focused on is pointing our domain to our content or servers. That is done with DNS records, which is exactly what the next chapter is all about.
+Now that we have a domain to play with, we can start talking about all the other configuration options available to us. SSL certificates, email, subdomains, etc. Right now, the most important task we should be focused on is pointing our domain to our content or servers. That is done with DNS records, which is exactly what the next chapter is all about.
