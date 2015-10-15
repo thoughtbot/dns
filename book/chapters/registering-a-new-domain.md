@@ -18,7 +18,7 @@ From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to
 
 If `donkeyrentals.com` is taken, we have to look for a different domain. Let's try `donkeyrentals.dentist` instead. If we're trying to retrieve WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. To do that visit the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
 
-```
+```shell
 whois -h whois.rightside.co donkeyrentals.dentist
 ```
 
