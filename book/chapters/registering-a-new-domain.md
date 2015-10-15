@@ -10,9 +10,9 @@ So how can we make sure that doesn't happen? We can skip the registrar all toget
 whois donkeyrentals.com
 ```
 
-`whois` (pronounced "who is") is a tool for retrieving information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we're just renting it for some amount of time. Confusingly, the protocol for WHOIS information is also called WHOIS but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
+`whois` (pronounced "who is") is a tool for retrieving information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we're just renting it for some amount of time. Confusingly, the protocol for WHOIS information is also called WHOIS, but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
 
-Using the command line tool isn't the only way. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html) a site that continues to hold strong to the design aesthetic of the early 90s. The only caveat of the service is it only supports certain domains, mostly the more common domains such as `.com`, `.net`, `.org`, etc.
+Using the command line tool isn't the only way. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html) a site that continues to hold strong to the design aesthetic of the early 90's. The only caveat of the service is it only supports certain domains, mostly the more common domains such as `.com`, `.net`, `.org`, etc.
 
 From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to read and isn't technically accurate. If you're curious, check out [TODO: relevant FAQ/appendix to be written].
 
@@ -48,7 +48,7 @@ If you're a bit overwhelmed now and just want a suggestion, here are some of my 
 
 ### Step three – Rent the domain
 
-The price for a single domain can range from free, all the way up to $100+/year. Some registrars charge monthly for other niceties. There's no standard and they can charge (or not charge) whatever they want. There are some commonalities among registrars however. Long existing domains like `com`, `net`, and `org` are usually pretty cheap, around $10, while newer or specialized domains like `luxury` and `loans` generally cost more, similar to their real-world counterparts.
+The price for a single domain can range from free, all the way up to $100+/year. Some registrars charge monthly for other niceties. There's no standard, and they can charge (or not charge) whatever they want. There are some commonalities among registrars however. Long existing domains like `com`, `net`, and `org` are usually pretty cheap, around $10, while newer or specialized domains like `luxury` and `loans` generally cost more, similar to their real-world counterparts.
 
 ### Step four – Complete WHOIS information
 
