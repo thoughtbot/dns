@@ -2,12 +2,12 @@ Registering a domain isn't the simplest process. Which like, duh that's probably
 
 ### Step one – Figure out if the domain is already taken
 
-Let's say we want the domain `petrock.com`. To register that name, we need to know if it's already taken. We could go visit the domain in our web browser and see if a website appears. But even if there's no website, that doesn't necessarily mean it's not registered. Another way is to go to a domain registrar, type in the domain and see if it's taken or not. There's a catch though: _domain name front running_. That is, when a company registers a domain out from under users after they have searched for it. Some registrars have [been caught](http://www.domainstate.com/industry-news-6/beware-dont-search-for-names-at-networksolutions-c-85864.html?s=) doing this.
+Let's say we want the domain `donkeyrentals.com`. To register that name, we need to know if it's already taken. We could go visit the domain in our web browser and see if a website appears. But even if there's no website, that doesn't necessarily mean it's not registered. Another way is to go to a domain registrar, type in the domain and see if it's taken or not. There's a catch though: _domain name front running_. That is, when a company registers a domain out from under users after they have searched for it. Some registrars have [been caught](http://www.domainstate.com/industry-news-6/beware-dont-search-for-names-at-networksolutions-c-85864.html?s=) doing this.
 
 So how can we make sure that doesn't happen? We can skip the registrar all together by using the command line utility `whois`:
 
 ```shell
-whois petrock.com
+whois donkeyrentals.com
 ```
 
 `whois` (pronouced "who is") is a tool for retrieving information about who has rights to a domain name. Notice I didn't mention ownership. No one ever actually owns a domain, we're just renting it for some amount of time. Confusingly, the protocol for WHOIS information is also called WHOIS but with uppercase letters. In summary: we can use `whois` to retrieve WHOIS information. Makes sense, right?
@@ -16,10 +16,10 @@ Using the command line tool isn't the only way, however. We can also use [Intern
 
 From now on, I'm not going to use the period for `com`, `net`, etc. It's hard to read and isn't technically accurate. If you're curious, check out [TODO: relevant FAQ/appendix to be written].
 
-If `petrock.com` is taken, we have to look for a different domain. Let's try `petrock.dentist` instead. If we're trying to retrieve WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. To do that visit the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
+If `donkeyrentals.com` is taken, we have to look for a different domain. Let's try `donkeyrentals.dentist` instead. If we're trying to retrieve WHOIS information for a domain that Internic doesn't support, we'll have to use a special WHOIS server. To do that visit the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains: `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
 
 ```
-whois -h whois.rightside.co petrock.dentist
+whois -h whois.rightside.co donkeyrentals.dentist
 ```
 
 Either way, we'll receive a bunch of text. Since there's no standard for what WHOIS returns, this could be any text. We're looking for text that in so many words says _We have no record of this domain so therefore it's open for registration._ Common ways to phrase this are: `No match for "EXAMPLE.COM"` or `No entries found`.
@@ -32,7 +32,7 @@ Now that we know our domain is available, we need to rent it from a registrar. P
 
 #### Wide selection of top-level domains
 
-With so many top-level domains (TLDs) like `com`, `io`, `co`, and `equipment` we want to make sure our registrar can handle all the domains we might want to register. (If you're looking for business ideas `petrock.equipment` sounds quite promising. But I'm just the idea guy, you'll have to run with it.) Whatever domains we want to register, we want to be able to manage them all from one spot, if possible.
+With so many top-level domains (TLDs) like `com`, `io`, `co`, and `equipment` we want to make sure our registrar can handle all the domains we might want to register. (If you're looking for business ideas `donkeyrentals.equipment` sounds quite promising. But I'm just the idea guy, you'll have to run with it.) Whatever domains we want to register, we want to be able to manage them all from one spot, if possible.
 
 #### A nice control panel
 
