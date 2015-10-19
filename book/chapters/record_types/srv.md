@@ -39,4 +39,4 @@ Note the `play` in the **Hostname** relates to the `play` in the **Value**. It i
 
 In this example I chose `1` for the **Priority** and **Weight** because when we only have one server it doesn't matter which one gets picked first or how often it's used.
 
-This isn't the only way to set up an SRV record as they can vary widely by service. Check the documentation to make sure you've set yours up the right way for your service.
+This isn't the only way to set up an SRV record as they can vary widely by service. We'll want to check the documentation from the provider (in this case Minecraft) to make sure we've set ours up the right way.
