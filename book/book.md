@@ -29,3 +29,11 @@
 <<[chapters/record_types/alias_aname.md]
 
 <<[chapters/record_types/conclusion.md]
+
+\clearpage
+
+# Debugging
+
+<<[chapters/debugging/how_dns_works.md]
+
+<<[chapters/debugging/dig.md]
