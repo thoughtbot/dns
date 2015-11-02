@@ -1,6 +1,6 @@
 ## dig
 
-So far, we've been using the dig command throughout this book to check our DNS handiwork. It stands for Domain Information Groper (ew) and it's sole job is to get information about DNS records. This thing is our swiss army knife for DNS debugging.
+So far, we've been using the dig command throughout this book to check our DNS handiwork. It stands for Domain Information Groper (ew) and it's sole job is to get information about DNS records. This thing is our Swiss Army knife for DNS debugging.
 
 ## Dig basics
 
