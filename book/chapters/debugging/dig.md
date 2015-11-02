@@ -34,10 +34,10 @@ The command breaks down like this:
 
 The response breaks down like this:
 
-* Header - This section shows us a bunch of information about the response, such as what type of response it is (`opcode: QUERY`), what flags are present (`flags: qr rd ra;`), and what types of responses we got: (`QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0`).
-* Question section - Restating what we asked for: A records for `donkeyrentals.com`.
-* Answer section - The information we wanted.
-* Statistics - Meta information about our request, how long it took, how large it was, what server was queried, etc.
+* Header - We can safely ignore this for now. For the curious, this section shows us information about the response such as what type of response it is (`opcode: QUERY`), what flags are present (`flags: qr rd ra;`), and what types of responses we got (`QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0`).
+* Question section - Also unimportant. It's only confirming what we asked for: A records for `donkeyrentals.com`.
+* Answer section - This is the part we care about because it contains the information we asked for.
+* Statistics - Meta information about our request, how long it took, how large it was, what server was queried, etc. Not important for now, but this will come up later.
 
 (Now, I know what you're thinking, "Wow this is captivating reading. Where can I learn even more?!" [RFC 1035](http://www.ietf.org/rfc/rfc1035.txt) from the Internet Engineering Task Force is a great place to start if you really want to dive into the weeds here.)
 
