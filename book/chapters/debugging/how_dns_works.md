@@ -26,7 +26,7 @@ m.root-servers.net.
 
 Told you.
 
-These are nameservers. Each one of these store the information needed to contact all top level domains like `com`, `net`, `horse`, etc. The `com` nameservers in turn store information about Hover, the DNS provider I use for donkey rentals. Finally, hover has information about donkeyrentals.com.
+These are nameservers. The order they are in doesn't matter. We can use any of them. Each one of these store the information needed to contact all top level domains like `com`, `net`, `horse`, etc. The `com` nameservers in turn store information about Hover, the DNS provider I use for donkey rentals. Finally, hover has information about donkeyrentals.com.
 
 That's how DNS works, each server looks in its database to find out how to get to the next level below it. To get to any domain, we have to go through all these steps. Well, _we_ don't have to go through all those steps. Software called a resolver does.
 
