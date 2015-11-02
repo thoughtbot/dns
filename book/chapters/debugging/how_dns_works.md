@@ -40,6 +40,6 @@ Dig lets us act like a resolver. We can see the whole chain of server interactio
 
 The other thing to know about DNS is that each step in the resolution process gets cached. When the resolver asks `com` for information about `donkeyrentals.com`, it gets stored for some amount of time. That time can be seconds to days depending on the server.
 
-This is because if the whole chain was traced every time anyone in the entire world wanted to go to a website that would put an enormous load on the root servers. Only 13 server looking up billions of sites a day. In reality, the each server has multiple servers pet letter. Even if there were 100, that's still hundreds of millions of sites per day. Too much.
+This is because if the whole chain was traced every time anyone in the entire world wanted to go to a website that would put an enormous load on the root servers. Only 13 server looking up billions of sites a day. In reality, each letter points to multiple servers. But even if there were 100, that's still hundreds of millions of sites per day. Too much.
 
 That should be enough to get us started with my very favorite debugging tool: dig.
