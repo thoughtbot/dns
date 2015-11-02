@@ -1,6 +1,6 @@
 ## dig
 
-So far, we've been using the dig command throughout this book to check our DNS handiwork. It stands for Domain Information Groper (ew) and it's sole job is to get information about DNS records. This thing is our Swiss Army knife for DNS debugging.
+So far, we've been using the dig command throughout this book to check our DNS handiwork. It stands for Domain Information Groper (ew) and its sole job is to get information about DNS records. This thing is our Swiss Army knife for DNS debugging.
 
 ## Dig basics
 
@@ -131,7 +131,7 @@ donkeyrentals.com.	900	IN	A	64.99.80.30
 ;; MSG SIZE  rcvd: 51
 ```
 
-In this case, we ask the name server `ns1.hover.com` what the A records are for `donkeyrentals.com`. You might think "Isn't this what we've been doing all along?" Yes and no. The first time we ask for `donkeyrentals.com`, it gets the uncached answer from `ns1.hover.com`. But then our DNS server (or network router, or internet service provider, or myriad other places) stores it in their cache for a certain number of seconds, represented by the `900` (15 minutes) in the answer line. That number by the way is called _Time to live_ or _TTL_.
+In this case, we ask the name server `ns1.hover.com` what the A records are for `donkeyrentals.com`. You might think "Isn't this what we've been doing all along?" Yes, and no. The first time we ask for `donkeyrentals.com`, it gets the uncached answer from `ns1.hover.com`. But then our DNS server (or network router, or internet service provider, or myriad other places) stores it in their cache for a certain number of seconds, represented by the `900` (15 minutes) in the answer line. That number by the way is called _Time to live_ or _TTL_.
 
 Theoretically after those 15 minutes pass, we'll get the uncached answer again, or at least the cache will have updated to display more up-to-date information if anything has changed.
 
