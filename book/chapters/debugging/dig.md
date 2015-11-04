@@ -178,3 +178,48 @@ This returns a PTR record. We didn't cover these in the last chapter because we 
 Now keep in mind this doesn't point back to a website, but to a server. If `somewebsite.com` is hosted at `somehost.com` with many other websites, a reverse lookup is more likely to show `someserver.somehost.com` rather than `somewebsite.com`. Facebook is so large they host their website on many servers, so they're easier to track down. Since it's not always accurate, I use these reverse lookups as a hint more than an answer.
 
 Another anecdote is that the "reverse DNS lookup" database is hosted at `in-addr.arpa` domain. All lookups happen by reversing the sections of the ip address and prepending the result to `in-addr.arpa`. So if you're trying to look up `12.34.56.78` you can also use `dig 78.56.34.12.in-addr.arpa PTR`.
+
+## Curiosities
+
+### What is the `IN` mean?
+
+In dig responses, we often see `IN` in the response:
+
+```shell
+;; QUESTION SECTION:
+;donkeyrentals.com.		IN	A
+```
+
+This doesn't mean "in" like "A records all up **in** ya donkeyrentals" but is short for "Internet". Turns out all records have a class. Other classes are like an entirely separate internet and have nothing to do with this book. For our uses we are using the IN (Internet) class always. That's also the class that dig defaults to. It can also be CH (Chaos) or HS (Hesiod) but we won't be talking about these no matter how rad they sound.
+
+### Why do records get returned in a different order?
+
+When we ran dig to see all the root servers, they may have come back in a seemly random order. This is called round-robin DNS. When we get back a list of IP addresses from a DNS query, generally a domain resolver will start with the first address in the list. If the first server doesn't respond, it will pick the next one, and so on.
+
+To make sure one server doesn't take all the heat, DNS providers can change the order the records are returned in. This helps distribute requests across multiple servers. Not all DNS providers do this, and it's not always done in the same way, but keep an eye out for it.
+
+### Why does the TTL value change drastically?
+
+While writing this book, this was a common scenario I ran into:
+
+```shell
+$ dig somedomain.com A
+
+somedomain.com.	127	IN	A	12.34.56.78
+
+$ dig somedomain.com A
+
+somedomain.com.	125	IN	A	12.34.56.78
+
+$ dig somedomain.com A
+
+somedomain.com.	541	IN	A	12.34.56.78
+```
+
+_Dig responses shortened to save pixels. Consider donating to the Save-A-Pixel foundation for America._
+
+What's going on here? We made a request to get the A records at `somedomain.com`. We see the TTL for the first request is `127`. Then, a couple of seconds later, we make the same request and see that the TTL has decreased by 2 seconds to `125`. Seems about right. Finally, after another couple of seconds, we make the request a third time and get `541`. What?!
+
+This is a perfect example of round-robin DNS. Just like I described above, DNS providers change the order of DNS records. So in this case, let's say there were looking at two servers, A and B. We saw the TTL value for server A, and then again for server A after it had decreased slightly. Then we saw server B which has a totally different TTL value.
+
+It's pretty normal to see this so don't let it phase you, but it is certainly jarring and confusing the first time.
