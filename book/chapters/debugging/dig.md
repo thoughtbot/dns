@@ -80,7 +80,7 @@ $ dig +short donkeyrentals.com
 
 _What order these options come in [does matter](http://serverfault.com/questions/431080/dig-show-only-answer#comment-462136). Always put the query option before the domain we're querying for. I've seen some wacky output sometimes the query option comes later._
 
-The dig manual lists many query options besides `+short` which we can look through at our leisure, but for now I'll point out a few of the more useful ones:
+The [dig manual](http://ftp.isc.org/isc/bind9/cur/9.9/doc/arm/man.dig.html) lists many query options besides `+short` which we can look through at our leisure, but for now I'll point out a few of the more useful ones:
 
 ### `+trace`
 
