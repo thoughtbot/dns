@@ -162,3 +162,19 @@ $ dig +short -f dig.txt
 
 ... no really, pixels are surprisingly expensive ...
 ```
+
+### Looking up a domain name by it's IP address
+
+So far, we have been looking up domain names to get their IP addresses, but can we do this in the other direction? We can indeed. This is what the `-x` flag is for:
+
+```shell
+$ dig -x 66.220.156.2
+
+2.156.220.66.in-addr.arpa. 2360	IN	PTR	edge-star-shv-07-ash4.facebook.com.
+```
+
+This returns a PTR record. We didn't cover these in the last chapter because we don't ever get to actually configure them. Briefly, PTR stands for pointer and they _point_ back to the original domain. In this case, we can see that it's a server at `facebook.com`.
+
+Now keep in mind this doesn't point back to a website, but to a server. If `somewebsite.com` is hosted at `somehost.com` with many other websites, a reverse lookup is more likely to show `someserver.somehost.com` rather than `somewebsite.com`. Facebook is so large they host their website on many servers, so they're easier to track down. Since it's not always accurate, I use these reverse lookups as a hint more than an answer.
+
+Another anecdote is that the "reverse DNS lookup" database is hosted at `in-addr.arpa` domain. All lookups happen by reversing the sections of the ip address and prepending the result to `in-addr.arpa`. So if you're trying to look up `12.34.56.78` you can also use `dig 78.56.34.12.in-addr.arpa PTR`.
