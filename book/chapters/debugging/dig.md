@@ -109,8 +109,6 @@ As we know, there's lots of caching involved in DNS. Since all of our DNS record
 ```shell
 $ dig @ns1.hover.com donkeyrentals.com A
 
-dig @ns1.hover.com donkeyrentals.com A
-
 ; <<>> DiG 9.8.3-P1 <<>> @ns1.hover.com donkeyrentals.com A
 ; (1 server found)
 ;; global options: +cmd
