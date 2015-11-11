@@ -2,6 +2,8 @@
 
 So far, we've been using the dig command throughout this book to check our DNS handiwork. It stands for Domain Information Groper (ew) and its sole job is to get information about DNS records. This thing is our Swiss Army knife for DNS debugging.
 
+_If you don't have dig installed on your machine, internet nerds have recreated dig's functionality on the web. Search for "dig web interface" and you should find a few tools._
+
 ## Dig basics
 
 The first step with dig is to look up A records:
