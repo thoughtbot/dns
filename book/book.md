@@ -37,3 +37,5 @@
 <<[chapters/debugging/how_dns_works.md]
 
 <<[chapters/debugging/dig.md]
+
+<<[chapters/debugging/nslookup.md]
