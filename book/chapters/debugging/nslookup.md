@@ -29,7 +29,9 @@ Name:    donkeyrentals.com
 Address:  64.99.80.30
 ```
 
-The bigest difference with nslookup is the way you use it. Type `nslookup` and hit enter. This brings up what's called interactive mode. You can type commands here without having to type nslookup first. The command prompt here is indicated with `>` instead of `$`. Type `exit` or hit `ctrl-c` to leave this mode and go back to the terminal.
+The biggest difference with nslookup is the way you use it. Type `nslookup` and hit enter. This brings up what's called interactive mode. You can type commands here without having to type nslookup first. The command prompt here is indicated with `>` instead of `$`. Type `exit` or hit `ctrl-c` to leave this mode and go back to the terminal.
+
+_There is a way to use nslookup without as single, one-off commands, but by far the most common way I've seen it used is in this interactive mode._
 
 We can type domain names and get their A records, just like dig. That's the first step. Here are some examples of other queries:
 
