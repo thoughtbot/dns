@@ -33,6 +33,33 @@ The bigest difference with nslookup is the way you use it. Type `nslookup` and h
 
 We can type domain names and get their A records, just like dig. That's the first step. Here are some examples of other queries:
 
+### Getting a little more info
+
+The `debug` setting can give you a more dig-like response including the question and TTL if you want it:
+
+```
+> set debug
+> donkeyrentals.com
+Server:		8.8.4.4
+Address:	8.8.4.4#53
+
+------------
+    QUESTIONS:
+	donkeyrentals.com, type = A, class = IN
+    ANSWERS:
+    ->  donkeyrentals.com
+	internet address = 64.99.80.30
+	ttl = 698
+    AUTHORITY RECORDS:
+    ADDITIONAL RECORDS:
+------------
+Non-authoritative answer:
+Name:	donkeyrentals.com
+Address: 64.99.80.30
+```
+
+To turn this off, type `set nodebug` at the prompt.
+
 ### Look up other record types, such as NS
 
 ```
