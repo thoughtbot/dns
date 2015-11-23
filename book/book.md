@@ -39,3 +39,5 @@
 <<[chapters/debugging/dig.md]
 
 <<[chapters/debugging/nslookup.md]
+
+<<[chapters/debugging/external_services.md]
