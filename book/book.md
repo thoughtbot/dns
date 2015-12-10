@@ -70,6 +70,6 @@
 
 <<[chapters/securing-your-website/introduction.md]
 
-<<[chapters/certificates.md]
+<<[chapters/securing-your-website/certificates.md]
 
 <<[chapters/be-prepared.md]
