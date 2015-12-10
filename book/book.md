@@ -66,14 +66,10 @@
 
 <<[chapters/common-scenarios/no-www.md]
 
-\clearpage
+# Securing Your Website
 
-# Glossary
+<<[chapters/securing-your-website/introduction.md]
 
-<<[chapters/glossary.md]
+<<[chapters/certificates.md]
 
-# Appendix: Installation
-
-<<[chapters/appendix/dig.md]
-
-<<[chapters/appendix/dig-windows.md]
+<<[chapters/be-prepared.md]
