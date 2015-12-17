@@ -74,7 +74,7 @@
 
 <<[chapters/securing-your-website/be-prepared.md]
 
-<<[chapters/nginx-certs.md]
+<<[chapters/securing-your-website/getting-a-certificate.md]
 
-<<[chapters/apache-certs.md]
+<<[chapters/securing-your-website/nginx-certs.md]
 
