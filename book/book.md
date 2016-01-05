@@ -78,3 +78,4 @@
 
 <<[chapters/securing-your-website/nginx-certs.md]
 
+<<[chapters/securing-your-website/apache-certs.md]
