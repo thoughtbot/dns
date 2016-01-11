@@ -41,3 +41,5 @@
 <<[chapters/debugging/nslookup.md]
 
 <<[chapters/debugging/external_services.md]
+
+<<[chapters/debugging/transferring.md]
