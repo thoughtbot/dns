@@ -1,4 +1,4 @@
-### NS
+## NS
 
 Nameserver (NS) records are the first point of contact to the outside world that we as domain administrators are responsible for. In fact, the `dig` command we've been using is asking the nameservers to get its information. NS records are often neglected when setting up or changing a domain. Most people just skip right to those attractive and charismatic A and CNAME records.
 

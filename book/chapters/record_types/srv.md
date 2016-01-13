@@ -1,4 +1,4 @@
-### SRV
+## SRV
 
 SRV (service) records exist to make it easier to connect to a specific service on a specific port. By "service" I mean something other than a website, for example [Minecraft](https://minecraft.net). It uses SRV records to help players to connect to an online Minecraft game by typing `play.donkeyrentals.com` instead of `92.112.56.78:9000`. SRV records can also provide server prioritization and load balancing. We'll get into all this below.
 

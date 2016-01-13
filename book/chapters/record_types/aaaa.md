@@ -1,4 +1,4 @@
-### AAAA
+## AAAA
 
 These records are the same as A records with one exception: they point to an IPv6 address instead of an IPv4. IPv6 addresses look something like this: `2620:0000:0861:ed1a:0000:0000:0000:0001`. That's eight sets of four hexadecimal digits, which is way too long. They can be severely shortened: `2620:0:861:ed1a::1`.
 

@@ -1,4 +1,4 @@
-### ALIAS or ANAME
+## ALIAS or ANAME
 
 These records are a special case. As of this writing, very few DNS providers implement them. When they are implemented their names and implementations vary wildly. So why are we even talking about them? Because they let us do a very special thing: point the apex domain to a non-address record.
 
@@ -31,4 +31,3 @@ $ dig donkeyrentals.com TXT +short
 ```
 
 Notice we looked for a TXT record here. That's how DNSimple does it but it might work some other way entirely! That's the brave new world of non-standard records. Exciting no? (ALIAS records. Coming to a theater near you.)
-

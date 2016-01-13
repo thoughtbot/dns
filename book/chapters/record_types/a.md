@@ -1,4 +1,4 @@
-### A
+## A
 
 A records are the bread and butter of DNS and probably the least complex. A records always (and only) point toward an IPv4 address such as `93.184.216.34`. A good way to remember this is A for Address.
 

@@ -1,4 +1,4 @@
-### MX
+## MX
 
 MX (Mail eXchange – the X looks cool that way) records are for email. The same way A or CNAME records point to a website, MX records tell email where to go on the internet. If you break apart an email address like `eeyore@donkeyrentals.com`, we have two parts: `eeyore` and `donkeyrentals.com`. MX records are only concerned with the second part: `donkeyrentals.com`.
 

@@ -1,4 +1,4 @@
-### CNAME
+## CNAME
 
 I want you to know going into this section that CNAMEs are odd and hard to understand. They have their uses, which we'll get into below, but don't worry if at first read you are as confused as I was when I began learning about CNAMEs. So saddle up on your rental donkey and let's get moving.
 
@@ -30,7 +30,7 @@ rabbitrentals.com.
 
 Now when people try to visit `redirect.donkeyrentals.com`, they get _hopped_ over (see what I did there?) to our competitors site.
 
-#### When To Use CNAMEs
+### When To Use CNAMEs
 
 Why would we use a CNAME record instead of an A? Well, for the most part, you wouldn't. A records are highly preferred because they are much more direct. When your browser sees an A record, it gets an IP address. That's it. Requesting a CNAME record is different. It looks up the record, sees that it's a CNAME, looks what the record is pointing toward, and then _restarts_ the request. This will make requests take longer to get to our final, glorious IP address.
 
@@ -38,7 +38,7 @@ CNAMEs also have limits. For example, we can't use a CNAME record on the apex (`
 
 For the most part A records are the way to go when we want to connect a domain to a website or service. But sometimes CNAMEs are the better (or only) choice. If we want an honest to goodness alternate name for the same domain, CNAMEs are it. Or for services like [Heroku](https://devcenter.heroku.com/articles/custom-domains#configuring-dns-for-subdomains) we need to use a CNAME to point our domain to an app we created. Heroku hosts lots of websites on many servers where the IP addresses can change at any time, so there's no IP address where we can point an A record.
 
-#### CNAMEs vs Subdomains
+### CNAMEs vs Subdomains
 
 There's a lot of confusion about the difference between a CNAME and a subdomain (at least there was for me when I started learning). They are two separate concepts, and it's important to understand both of them.
 

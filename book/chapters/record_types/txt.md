@@ -1,4 +1,4 @@
-### TXT
+## TXT
 
 TXT (text) records are incredibly simple. They're a string of text connected to a hostname. But since they are so simple and their purpose is undefined, they are very much the "other" type of record. For example:
 
