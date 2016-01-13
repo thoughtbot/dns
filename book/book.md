@@ -4,11 +4,13 @@
 \clearpage
 \mainmatter
 
+# Introduction
+
 <<[chapters/introduction/welcome.md]
 
 <<[chapters/introduction/who-is-this-for.md]
 
-<<[chapters/introduction/software-needed.md]
+<<[chapters/introduction/software.md]
 
 # Registering A New Domain
 
