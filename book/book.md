@@ -32,14 +32,24 @@
 
 \clearpage
 
-# Debugging
+# Tools of the Trade
 
-<<[chapters/debugging/how_dns_works.md]
+<<[chapters/tools/how_dns_works.md]
 
-<<[chapters/debugging/dig.md]
+<<[chapters/tools/dig.md]
 
-<<[chapters/debugging/nslookup.md]
+<<[chapters/tools/nslookup.md]
 
-<<[chapters/debugging/external_services.md]
+<<[chapters/tools/whois.md]
 
-<<[chapters/debugging/transferring.md]
+\clearpage
+
+# Common Scenarios
+
+<<[chapters/common-scenarios/intro.md]
+
+<<[chapters/common-scenarios/external_services.md]
+
+<<[chapters/common-scenarios/transferring.md]
+
+\clearpage
