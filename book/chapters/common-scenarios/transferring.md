@@ -36,6 +36,16 @@ Every registrar is different at this point, but most likely, we'll agree to some
 
 The reason most transfers cost money is ICANN (the people that run the whole domain system) require that the domain's expiration date be pushed out one year. So if the domain was going to expire on January 1, 1999, now it will expire January 1, 2000. For that reason, transferring often costs a similar amount to registering that same domain for the first time.
 
+### Minimize downtime
+
+<!--
+http://serverfault.com/questions/459968/how-to-switch-dns-for-a-website-without-service-disruption
+http://dyn.com/blog/changing-managed-dns-providers-in-five-easy-steps/
+http://www.securityweek.com/dns-migration-how-minimize-problems-when-switching-dns-providers
+http://www.binarywar.com/2009/11/how-to-safely-transfer-dns-records/
+https://en.wikipedia.org/wiki/DNS_zone_transfer
+-->
+
 ### Clean Up
 
 After we've set up the transfer at ProbablyBetter Domains, we may need to accept that transfer back at OldCrusty Domains. Then, we wait. The process can take up to two weeks so be prepared to wait that long. In my experience, it doesn't usually take that long, but give yourself that time just in case.

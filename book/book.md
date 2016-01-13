@@ -4,6 +4,12 @@
 \clearpage
 \mainmatter
 
+<<[chapters/introduction/welcome.md]
+
+<<[chapters/introduction/who-is-this-for.md]
+
+<<[chapters/introduction/software-needed.md]
+
 # Registering A New Domain
 
 <<[chapters/registering-a-new-domain.md]
@@ -42,6 +48,8 @@
 
 <<[chapters/tools/whois.md]
 
+<<[chapters/tools/host.md]
+
 \clearpage
 
 # Common Scenarios
@@ -52,4 +60,20 @@
 
 <<[chapters/common-scenarios/transferring.md]
 
+<<[chapters/common-scenarios/dns-not-resolving.md]
+
+<<[chapters/common-scenarios/no-apex-cname.md]
+
+<<[chapters/common-scenarios/no-www.md]
+
 \clearpage
+
+# Glossary
+
+<<[chapters/glossary.md]
+
+# Appendix: Installation
+
+<<[chapters/appendix/dig.md]
+
+<<[chapters/appendix/dig-windows.md]
