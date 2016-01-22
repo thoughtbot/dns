@@ -2,7 +2,7 @@
 
 Let's clear up one thing real fast: WHOIS in all caps is a protocol. `whois` all lowercase is a command line tool. They are related, but not the same thing. The `whois` tool uses the WHOIS protocol to retrieve information about a domain. We'll be interacting with `whois` directly, and WHOIS indirectly.
 
-The information we get using `whois` is different for every domain. The most common and useful pieces include contact information for the person or company that registered the domain, and/or the expiration date of that domain. The catch is that this information has no standard to it. I can be any information, in any format.
+The information we get using `whois` is different for every domain. The most common and useful pieces include contact information for the person or company that registered the domain, and/or the expiration date of that domain. The catch is that this information has no standard to it. I can be any information, in any format. As we'll see, this can make working with WHOIS incredibly annoying.
 
 Let's take a look at a response. It's a long one:
 
@@ -167,13 +167,15 @@ RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.
 
 Hello. Welcome to like, three pages later.
 
-There's a lot here as we can see. Most of it is legal disclaimer. This is because WHOIS information has been the source of a lot of legal trouble over the years. The act of publicly displaying a customers personal information has caused a lot of problems as one might imagine.
+There's a lot to this response as we can see. Most of it is legal disclaimer. This is because WHOIS information has been the source of a lot of legal trouble over the years. The act of publicly displaying a customer's personal information has (surprise!) caused a lot of problems.
 
 There's also some meta information about the servers that were contacted to get this information and also some pseudo-advertisements. For the most part you can ignore these.
 
 Towards the middle is the information we're probably looking for: who the domain is registered to and who when it expires. This can give us leads for who to contact if there's a problem or when the domain might go up for sale.
 
-This is just one example of what a `com` domain will return but as I said, each TLD is different. Here's another response from a `gov` domain:
+### Different TLDs
+
+Above is just one example of what a `com` domain will return but as I said, each TLD is different. Here's a different response from a `gov` domain:
 
 ```shell
 $ whois nasa.gov
@@ -190,7 +192,9 @@ server at RS.INTERNIC.NET.
 
 Much shorter! This is because there's no guide or specification that dictates what WHOIS information needs to include or how it should be formatted. What a great "standard" this is!
 
-Another aspect to consider: since all this information is stored on different servers, occasionally we'll need to specify which server to use. For example, if we try to look up a `dentist` domain we get:
+### Different WHOIS servers
+
+Another aspect to consider: since all this information is stored on different servers (all TLDs are run by different companies), occasionally we'll need to specify which server to use. For example, if we try to look up a `dentist` domain we get:
 
 ```shell
 $ whois donkey.dentist
@@ -198,7 +202,7 @@ $ whois donkey.dentist
 whois: dentist.whois-servers.net: nodename nor servname provided, or not known
 ```
 
-It can't find the right server! Luckily the [root zone database](https://www.iana.org/domains/root/db) list all TLDs and their WHOIS server info. Clicking on the dentist domain gives up a bunch of information about the TLD and at the bottom, a WHOIS server: `whois.rightside.co`. Now we can make our WHOIS query using the `-h` option:
+It can't find the right server. Luckily the [root zone database](https://www.iana.org/domains/root/db) list all TLDs and their WHOIS server info. Clicking on the dentist domain gives up a bunch of information about the TLD and at the bottom, a WHOIS server: `whois.rightside.co`. Now we can make our WHOIS query using the `-h` option:
 
 ```
 $ whois -h whois.rightside.co donkey.dentist
@@ -210,8 +214,82 @@ Domain not found.
 
 Be right back, I need to go register a domain real quick.
 
+### Multiple domains
+
+This is a tricky one, but sometimes, `whois` isn't smart enough to figure out what you mean. For example, if you try to get WHOIS information for a popular domain:
+
+```shell
+$ whois google.com
+
+Aborting search 50 records found .....
+GOOGLE.COM.AFRICANBATS.ORG
+GOOGLE.COM.ANGRYPIRATES.COM
+GOOGLE.COM.AR
+GOOGLE.COM.AU
+GOOGLE.COM.BAISAD.COM
+GOOGLE.COM.BEYONDWHOIS.COM
+...
+```
+
+What is all this? Did we mistakenly type only a subdomain from `africanbats.org`? Unlikely. It seems like WHOIS just isn't that smart at figuring out what we mean. So how do we get the information for just `google.com`?
+
+Maybe you tried this out yourself and saw this piece of text the gigantic domain list:
+
+>To single out one record, look it up with "xxx", where xxx is one of the
+records displayed above. If the records are the same, look them up
+with "=xxx" to receive a full display for each record.
+
+But if we go and try that advice, one of two things happen. If we try surround it in quotes, we get the same result. If use the `=` "trick" it shows us WHOIS information for _all_ of the domains on that list:
+
+```shell
+$ whois "=google.com"
+
+Aborting search 50 records found .....
+   Server Name: GOOGLE.COM.AFRICANBATS.ORG
+   Registrar: TUCOWS DOMAINS INC.
+   Whois Server: whois.tucows.com
+   Referral URL: http://www.tucowsdomains.com
+
+
+   Server Name: GOOGLE.COM.ANGRYPIRATES.COM
+   IP Address: 8.8.8.8
+   Registrar: NAME.COM, INC.
+   Whois Server: whois.name.com
+   Referral URL: http://www.name.com
+
+...
+```
+
+This does get us the information that we want, but come on. Really WHOIS!? We don't want to see any of that. Can't we just get the single domain we asked for?
+
+Turns out that if you prepend `domain` on to the front of the domain you want and put it all in quotes, this works:
+
+```shell
+$ whois "domain google.com"
+
+Whois Server Version 2.0
+
+Domain names in the .com and .net domains can now be registered
+with many different competing registrars. Go to http://www.internic.net
+for detailed information.
+
+   Domain Name: GOOGLE.COM
+   Registrar: MARKMONITOR INC.
+   Sponsoring Registrar IANA ID: 292
+   Whois Server: whois.markmonitor.com
+   Referral URL: http://www.markmonitor.com
+   Name Server: NS1.GOOGLE.COM
+   Name Server: NS2.GOOGLE.COM
+
+...
+```
+
+Bit fair warning here: this **doesn't work with all domains**. (There's no standard for WHOIS, remember? It can be anything! What a great syst– uhg I can't finish that sentence with a straight face.)
+
+There are alternatives like [jwhois](https://www.gnu.org/software/jwhois/) that a lot of people really like. There are also web based tools that help get around these issues. I recommend using one of those instead.
+
 ---
 
-Honestly, the more I look into WHOIS the less I am a fan of it. I has it uses such as a quick check to see if a domain is registered, but overall, it's a mess. The Internet Engineering Task Force (which wins for best company name in this whole book) and ICANN both [recognize](https://tools.ietf.org/html/rfc3912#section-5) that WHOIS is flawed and are [trying to replace it](https://www.icann.org/en/system/files/files/initial-report-24jun13-en.pdf).
+Honestly, the more I look into WHOIS the less I am a fan of it. It can be useful for checking to see if a domain is registered, but overall, it's a mess. The Internet Engineering Task Force (which wins the _Best Company Name In This Book_ award) and ICANN both [recognize](https://tools.ietf.org/html/rfc3912#section-5) that WHOIS is flawed and are [trying to replace it](https://www.icann.org/en/system/files/files/initial-report-24jun13-en.pdf).
 
-Hopefully we'll see this happen, but it's what we have for now.
+Hopefully we'll see this happen, but for now WHOIS is all we have.
