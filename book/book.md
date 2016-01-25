@@ -68,7 +68,7 @@
 
 <<[chapters/common-scenarios/no-apex-cname.md]
 
-<<[chapters/common-scenarios/old-data.md]
+<<[chapters/common-scenarios/no-www.md]
 
 <<[chapters/common-scenarios/redirect-domain.md]
 
