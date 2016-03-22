@@ -72,4 +72,9 @@
 
 <<[chapters/securing-your-website/certificates.md]
 
-<<[chapters/be-prepared.md]
+<<[chapters/securing-your-website/be-prepared.md]
+
+<<[chapters/nginx-certs.md]
+
+<<[chapters/apache-certs.md]
+
