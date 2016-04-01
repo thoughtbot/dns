@@ -38,3 +38,19 @@ $ choco feature disable -n=allowGlobalConfirmation
 ```
 
 Now you can install [tons of great packages](https://chocolatey.org/packages)!
+
+### Additional installation
+
+This book makes heavy use of the [BIND suite](https://www.isc.org/downloads/) of tools, like `dig`, `host`, and `nslookup`. Chocolatey can install them, but they will also need some additional supporting software. Specifically, the succinctly named _Visual C++ Redistributable for Visual Studio 2012 Update 4_.
+
+Installation is pretty simple:
+
+1. Visit [this website](https://www.microsoft.com/en-us/download/details.aspx?id=30679).
+2. Download the x64 or x86 version of the software based on your system architecture.
+    1. Not sure what system architecture you have?
+    2. On Windows 7, open the Start menu and right-click on `Computer`, then click `Properties`
+    3. On Windows 10, right click the Start menu and click `System`
+    4. In the System section, `System type` should say **32-** or **64-bit Operating System**.
+    5. Download x64 for 64-bit systems and x86 for 32.
+3. Double click the installer and let it do it's thing.
+4. `dig`, `host`, and `nslookup` should work without issue.
