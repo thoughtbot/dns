@@ -2,9 +2,9 @@
 
 We'll be installing the software used in this book with a package manager. Unix and Linux operating systems often come with a package manager installed. Package managers are great because in addition to installing software, they install supporting packages, keep an up-to-date list of safe software packages, and make it very easy to uninstall software later.
 
-You can think of a package like an application; software written to do a specific set of tasks. The difference is that these packages are used almost always from the command prompt instead of opening up a graphical interface. Installing graphical applications via a package manager is not unheard of however.
+You can think of a package like an application; software written to do a specific set of tasks. The difference is that these packages are used almost always from the command prompt instead of opening up a graphical interface. Installing graphical applications via a package manager is not unheard of, however.
 
-Tools used in this book (`dig`, `host`, `openssl`, `nslookup`, and `whois`) are all available via a package manager. While this is incredibly convenient, even _more_ convenient is often, many of these tools are already installed.
+The tools used in this book (`dig`, `host`, `openssl`, `nslookup`, and `whois`) are all available via a package manager. While this is incredibly convenient, even _more_ convenient is that many of these tools are often already installed.
 
 From your shell or command prompt, you can use the `which` command to see if a tool is installed:
 
@@ -80,7 +80,7 @@ $ setx path "%PATH%;C:\Program Files\OpenSSL\bin"
 
 ### Installation check
 
-After these are installed, do a quick `which <command>` or `where <command>` to determine if these are installed. A slightly more involved check would be to invoke the command in its simplest form:
+We can make sure the tools installed properly by running a quick `which <command>` or `where <command>`. A slightly more involved check would be to invoke the command in its simplest form:
 
 * dig: `dig -v` - Displays the current version of the dig command.
 * host: `host` - Displays list of command options.
