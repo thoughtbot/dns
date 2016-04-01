@@ -81,3 +81,11 @@
 <<[chapters/securing-your-website/apache-certs.md]
 
 <<[chapters/securing-your-website/conclusion.md]
+
+# Appendix
+
+<<[chapters/appendix/install.md]
+
+<<[chapters/appendix/mac-pkg-mgmt.md]
+
+<<[chapters/appendix/windows-pkg-mgmt.md]
