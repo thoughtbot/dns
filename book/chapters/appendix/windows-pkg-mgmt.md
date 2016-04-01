@@ -1,10 +1,6 @@
 ## Package Management for Windows
 
-We'll be installing the software used in this book with a package manager. Unix and Linux based systems often come with a package manager installed. Package managers are great because in addition to installing software, they install supporting packages, keep an up-to-date list of safe software packages, and make it very easy to uninstall software later.
-
-You can think of a package like an application; software written to do a specific set of tasks. The difference is that these packages are used almost always from the command prompt instead of opening up a graphical interface. Installing graphical applications via a package manager is not unheard of however.
-
-Some bad news: Windows does not come with a package manager. But good news; it's pretty easy to install one. In particular, we're going to install [chocolatey](https://chocolatey.org).
+Some bad news: Windows does not come with a package manager. But good news: it's pretty easy to install one. In particular, we're going to install [chocolatey](https://chocolatey.org).
 
 Open your Command Prompt by using the Start menu to search for `Command`. When you see the Command Prompt show up, right click it and "Run as administrator".
 
