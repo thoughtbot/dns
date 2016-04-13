@@ -66,6 +66,8 @@
 
 <<[chapters/common-scenarios/no-www.md]
 
+\clearpage
+
 # Securing Your Website
 
 <<[chapters/securing-your-website/introduction.md]
@@ -81,6 +83,14 @@
 <<[chapters/securing-your-website/apache-certs.md]
 
 <<[chapters/securing-your-website/conclusion.md]
+
+\clearpage
+
+# Glossary
+
+<<[chapters/glossary.md]
+
+\clearpage
 
 # Appendix
 
