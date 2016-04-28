@@ -1,27 +1,27 @@
-## Connecting Your Domain to an External Service
+## Connecting A Domain to an External Service
 
-There are tons of web services today that help you set up a website if you're not a web developer. Gone are the days where you have to write your own blog, store, or company website, although some of us with masochistic tendencies tend to make our own anyway.
+There are tons of web services today that help us set up a website if we're not a web developer. Gone are the days where we have to write our own blog, store, or company website, although some of us with masochistic tendencies tend to anyway.
 
-These services are great, but they often give you a relatively non-personal URL, something like your-name.service.com. It works fine enough for testing, but running a serious business (renting donkeys) needs a professional and trustable domain name.
+These services are great, but they often give us a relatively non-personal URL, something like `our-name.service.com`. That works fine enough for testing, but running a serious business (such as renting donkeys) needs a professional and trustable domain name.
 
-One solution is that many services will offer to sell you a domain up front. Obviously, domain experts like us don't need that kind of handholding. We want to be in control of our domains! What if we decide to switch services? Or have subdomains that point to other services? For me personally, this isn't flexible enough.
+Sometimes, services will offer to sell us a domain up front. Obviously, domain experts like us don't need that kind of handholding. We want to be in control of our domains! What if we decide to switch services? Or have subdomains that point to other services? For me personally, this offering isn't flexible enough.
 
-Connecting a domain that you own is usually takes two major steps: adding DNS records to point toward the service, then telling the service about the domain.
+Connecting a domain that we own usually involves two steps: adding DNS records to point toward the service, then telling the service about the domain.
 
-There are a few different ways to do the first step. The most common technique I've seen is to point an A or CNAME record toward an IP or hostname owned by the service. Sometimes services force you to switch to their nameservers so they can manage your DNS records. If this is the case, hope that they have good DNS controls if you ever want to set up other subdomains.
+There are a few different ways to do the first step. The most common technique I've seen is to point an A or CNAME record toward an IP or hostname owned by the service. Sometimes services force us to switch to their nameservers so they can manage our DNS records. If this is the case, hope that they have good DNS controls if we ever want to set up other subdomains.
 
-Then, you often tell the service about your domain. Usually in some control panel somewhere, you enter it and for the most part, that's it. Sometimes this takes a bit to start working, but it's often pretty immediate.
+Then we tell the service about our domain. Usually, in some control panel we enter our domain, so the service knows what domains to look for. This may take a bit to start working, but it's often immediate.
 
-### Some pointers
+### Check the work
 
-Use dig to check your work, and specify a nameserver. This way you can get 100% up-to-date information:
+If it's not working, we can use `dig` to specify a nameserver. This returns 100% up-to-date information and can confirm that we set the records correctly:
 
 ```dig
-dig @ns1.example.com shop.yourdomain.com
+dig @ns1.example.com donkeyrentals.com
 
 ...
 ```
 
-The only caveat here is that if you're using the services nameservers, make sure that's what you are, in fact, querying those servers. That's where the updated records will be.
+A caveat here is that if we're using the service's nameservers, we need to query those servers instead of our DNS provider's servers. That's where the updated records will be.
 
-Also, be aware that if you want to use your bare, apex domain, you won't be able to connect it with a  CNAME record unless your DNS provider supports ANAME/ALIAS/etc records. Some services force you to use a CNAME in which case you'll have to use a subdomain like `www`.
+Also, be aware that if we want to use our bare, apex domain, we won't be able to use a CNAME record with the service unless our DNS provider supports ANAME/ALIAS/etc. records. Some services force us to use a CNAME in which case we'll have to use a subdomain like `www`. We'll explore solutions to this problem later.
