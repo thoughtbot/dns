@@ -56,15 +56,19 @@
 
 <<[chapters/common-scenarios/intro.md]
 
-<<[chapters/common-scenarios/external_services.md]
+<<[chapters/common-scenarios/subdomain.md]
 
 <<[chapters/common-scenarios/transferring.md]
 
-<<[chapters/common-scenarios/dns-not-resolving.md]
+<<[chapters/common-scenarios/external-services.md]
+
+<<[chapters/common-scenarios/no-www.md]
 
 <<[chapters/common-scenarios/no-apex-cname.md]
 
-<<[chapters/common-scenarios/no-www.md]
+<<[chapters/common-scenarios/old-data.md]
+
+<<[chapters/common-scenarios/redirect-domain.md]
 
 \clearpage
 
