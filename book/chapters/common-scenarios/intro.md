@@ -1,1 +1,3 @@
-To be written
+In this chapter, I hope to cover some of the more common problems that I see people run into when trying to setup DNS and domains. There are a million different ways to configure websites and a million other different services that have their own requirements. It would be impossible to write them all up in detail, but hopefully, I can give you the tools to find what you're looking for and troubleshooting tips for when it goes awry.
+
+Feel free to skip to the sections your interested in. If everything seems to work just fine, then you can skip the chapter all together! Be warned though, you will miss a handful of mediocre jokes.
