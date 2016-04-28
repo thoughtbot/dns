@@ -4,8 +4,6 @@ There are tons of web services today that help you set up a website if you're no
 
 These services are great, but they often give you a relatively non-personal URL, something like your-name.service.com. It works fine enough for testing, but running a serious business (renting donkeys) needs a professional and trustable domain name.
 
-_I'll try to make this section as generic as possible. There are scores of popular services that let you connect custom domains. It would be impossible to write them all up in detail, but hopefully I can give you the tools to find what you're looking for and troubleshoot if it goes awry._
-
 One solution is that many services will offer to sell you a domain up front. Obviously, domain experts like us don't need that kind of handholding. We want to be in control of our domains! What if we decide to switch services? Or have subdomains that point to other services? For me personally, this isn't flexible enough.
 
 Connecting a domain that you own is usually takes two major steps: adding DNS records to point toward the service, then telling the service about the domain.
