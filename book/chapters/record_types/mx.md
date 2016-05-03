@@ -2,7 +2,7 @@
 
 MX (Mail eXchange – the X looks cool that way) records are for email. The same way A or CNAME records point to a website, MX records tell email where to go on the internet. If you break apart an email address like `eeyore@donkeyrentals.com`, we have two parts: `eeyore` and `donkeyrentals.com`. MX records are only concerned with the second part: `donkeyrentals.com`.
 
-Your email provider (Gmail, Fastmail, etc.) will have a list of servers you need to make MX records for. First, let's try to set one up:
+Your email provider (Gmail, Hotmail, Fastmail, etc.) will have a list of servers you need to make MX records for. First, let's try to set one up:
 
 * **Hostname**: `@`
 * **Record Type**: `MX`
@@ -19,10 +19,36 @@ The **record type** (`MX` in this case) should be pretty obvious. We're talking 
 
 The **Value** is finally the domain name of a server. This configuration might look similar to a CNAME record, but the domain name we point to must be an A or AAAA record. I.e. we can't point an MX record to a CNAME or other type of record. It has to go to a domain that points directly to an IP address.
 
-Finally, we can verify it:
+Finally, we can verify the record:
 
 ```shell
 $ dig donkeyrentals.com MX +short
 
 10 aspmx.l.google.com
 ```
+
+### How email uses MX records
+
+Let's take a second to talk about how email uses these records. When an email server needs to deliver to `donkeyrentals.com`, it looks up MX records for that domain. We just did the same thing for our domain. Let's pretend there are a bunch of servers instead of just one. This is a much more common scenario:
+
+```shell
+$ dig donkeyrentals.com MX +short
+
+5 gmail-smtp-in.l.google.com.
+10 alt1.gmail-smtp-in.l.google.com.
+20 alt2.gmail-smtp-in.l.google.com.
+30 alt3.gmail-smtp-in.l.google.com.
+40 alt4.gmail-smtp-in.l.google.com.
+```
+
+The mail server first tries the record with the lowest priority on the list, `gmail-smtp-in.l.google.com.` and looks up its IP address. Remember that all MX records must point to an A or AAAA record so they will always resolve to an IP address:
+
+```
+$ dig gmail-smtp-in.l.google.com A +short
+
+173.194.68.26
+```
+
+Then it tries to send the email data. If it fails, it moves on to the item with the next server `alt1.gmail-smtp-in.l.google.com.` which is next lowest priority. The mail server tries server after server until one succeeds or they all fail.
+
+It might seem weird to use the server with the _lowest_ priority first. For that reason, priority is often called **distance**. That way we can think of it like starting with closer servers first and moving outward. Of course, this has nothing to do with the physical location of the servers. It's only a mental model to help remember what that number is for.
