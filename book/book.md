@@ -50,6 +50,8 @@
 
 <<[chapters/tools/host.md]
 
+<<[chapters/tools/ping.md]
+
 \clearpage
 
 # Common Scenarios
