@@ -14,6 +14,8 @@
 
 <<[chapters/introduction/who-is-this-for.md]
 
+<<[chapters/introduction/how-to-read.md]
+
 <<[chapters/introduction/software.md]
 
 # Registering A New Domain
