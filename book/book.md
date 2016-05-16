@@ -4,6 +4,10 @@
 \clearpage
 \mainmatter
 
+<<[chapters/introduction/dedication.md]
+
+\clearpage
+
 # Introduction
 
 <<[chapters/introduction/welcome.md]
