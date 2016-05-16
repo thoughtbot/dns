@@ -113,3 +113,9 @@
 <<[chapters/appendix/mac-pkg-mgmt.md]
 
 <<[chapters/appendix/windows-pkg-mgmt.md]
+
+# Conclusion
+
+<<[chapters/conclusion/afterword.md]
+
+<<[chapters/conclusion/thanks.md]
