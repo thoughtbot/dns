@@ -26,29 +26,29 @@
 
 # Types of DNS Records
 
-<<[chapters/record_types/a.md]
+<<[chapters/record-types/a.md]
 
-<<[chapters/record_types/aaaa.md]
+<<[chapters/record-types/aaaa.md]
 
-<<[chapters/record_types/cname.md]
+<<[chapters/record-types/cname.md]
 
-<<[chapters/record_types/ns.md]
+<<[chapters/record-types/ns.md]
 
-<<[chapters/record_types/txt.md]
+<<[chapters/record-types/txt.md]
 
-<<[chapters/record_types/srv.md]
+<<[chapters/record-types/srv.md]
 
-<<[chapters/record_types/mx.md]
+<<[chapters/record-types/mx.md]
 
-<<[chapters/record_types/alias_aname.md]
+<<[chapters/record-types/alias-aname.md]
 
-<<[chapters/record_types/conclusion.md]
+<<[chapters/record-types/conclusion.md]
 
 \clearpage
 
 # Tools of the Trade
 
-<<[chapters/tools/how_dns_works.md]
+<<[chapters/tools/how-dns-works.md]
 
 <<[chapters/tools/dig.md]
 
