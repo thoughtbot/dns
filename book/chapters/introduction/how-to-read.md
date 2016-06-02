@@ -45,7 +45,7 @@ I just expect you to type the five letters "hello", not "$ hello".
 I also use the command line tool `dig` liberally throughout the book, as it's extremely useful for inspecting existing domains. It has a relatively verbose response by default. To try and reign in these responses, I use the `+short` option on most `dig` commands:
 
 ```
-$ dig example.com +short
+$ dig +short example.com
 
 104.131.191.2
 ```

@@ -17,7 +17,7 @@ Imagine you were looking someone up in a phone book for the wrong town. You woul
 We can check our configuration with `dig`:
 
 ```
-$ dig donkeyrentals.com NS +short
+$ dig +short donkeyrentals.com NS
 
 ns1.hover.com
 ns2.hover.com

@@ -21,7 +21,7 @@ Here's an example configuration:
 * **IP Address**: `2620:0:861:ed1a::1`
 
 ```shell
-$ dig donkeyrentals.com AAAA +short
+$ dig +short donkeyrentals.com AAAA
 
 2620:0:861:ed1a::1
 ```

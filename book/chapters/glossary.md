@@ -202,7 +202,7 @@ A registry manages one or more top-level domains, like `com`, or `co.uk`, or `de
 Reverse DNS. This is when you try to get a domain name from an IP address. You can try this easily with dig:
 
 ```shell
-$ dig -x 66.220.158.68 +short
+$ dig +short -x 66.220.158.68
 
 edge-star-mini-shv-07-frc3.facebook.com.
 ```

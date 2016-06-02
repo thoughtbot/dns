@@ -9,7 +9,7 @@ CNAME records are the other side of the coin from A and AAAA records. Instead of
 * **Target Host**: `donkeyrentals.com`
 
 ```shell
-$ dig www.donkeyrentals.com CNAME +short
+$ dig +short www.donkeyrentals.com CNAME
 
 donkeyrentals.com.
 ```
@@ -23,7 +23,7 @@ That's not all. You can point a CNAME record at any domain, even one that isn't 
 * **Target Host**: `rabbitrentals.com`
 
 ```shell
-$ dig redirect.donkeyrentals.com CNAME +short
+$ dig +short redirect.donkeyrentals.com CNAME
 
 rabbitrentals.com.
 ```

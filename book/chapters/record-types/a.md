@@ -13,7 +13,7 @@ The `@` symbol means **apex domain** and has nothing to do with the "at sign" in
 Once that record set up, we can check our work by using `dig`:
 
 ```shell
-$ dig donkeyrentals.com A +short
+$ dig +short donkeyrentals.com A
 
 104.131.191.2
 ```
@@ -29,7 +29,7 @@ We can also use A records with subdomains:
 This will set up a similar record as above, but for the subdomain `accessories.donkeyrentals.com`:
 
 ```shell
-$ dig accessories.donkeyrentals.com A +short
+$ dig +short accessories.donkeyrentals.com A
 
 104.131.191.2
 ```

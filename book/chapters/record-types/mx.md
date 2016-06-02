@@ -22,7 +22,7 @@ The **Value** is finally the domain name of a server. This configuration might l
 Finally, we can verify the record:
 
 ```shell
-$ dig donkeyrentals.com MX +short
+$ dig +short donkeyrentals.com MX
 
 10 aspmx.l.google.com
 ```
@@ -32,7 +32,7 @@ $ dig donkeyrentals.com MX +short
 Let's take a second to talk about how email uses these records. When an email server needs to deliver to `donkeyrentals.com`, it looks up MX records for that domain. We just did the same thing for our domain. Let's pretend there are a bunch of servers instead of just one. This is a much more common scenario:
 
 ```shell
-$ dig donkeyrentals.com MX +short
+$ dig +short donkeyrentals.com MX
 
 5 gmail-smtp-in.l.google.com.
 10 alt1.gmail-smtp-in.l.google.com.
@@ -44,7 +44,7 @@ $ dig donkeyrentals.com MX +short
 The mail server first tries the record with the lowest priority on the list, `gmail-smtp-in.l.google.com.` and looks up its IP address. Remember that all MX records must point to an A or AAAA record so they will always resolve to an IP address:
 
 ```
-$ dig gmail-smtp-in.l.google.com A +short
+$ dig +short gmail-smtp-in.l.google.com A
 
 173.194.205.27
 ```

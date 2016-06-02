@@ -30,7 +30,7 @@ Ok, _now_ we can set up our SRV record:
 * **Value**: `play.donkeyrentals.com`
 
 ```shell
-$ dig _minecraft._tcp.play.donkeyrentals.com SRV +short
+$ dig +short _minecraft._tcp.play.donkeyrentals.com SRV
 
 1 1 9000 play.donkeyrentals.com.
 ```

@@ -17,7 +17,7 @@ Since these aren't the same across the board I can't promise this is how we'll h
 When we want to test our setup, if we're lucky, our DNS provider will let us ask it about ALIAS or ANAME records directly:
 
 ```shell
-$ dig donkeyrentals.com ALIAS +short
+$ dig +short donkeyrentals.com ALIAS
 
 104.131.191.2
 ```
@@ -25,7 +25,7 @@ $ dig donkeyrentals.com ALIAS +short
 But again, these are _non-standard_ record types, so we may have to result to alternate methods:
 
 ```shell
-$ dig donkeyrentals.com TXT +short
+$ dig +short donkeyrentals.com TXT
 
 "ALIAS for someotherwebsite.com"
 ```
