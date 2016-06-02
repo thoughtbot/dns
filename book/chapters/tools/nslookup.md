@@ -21,12 +21,12 @@ Anyway, if you skipped the last few paragraphs let's start with the most basic e
 ```shell
 $ nslookup
 > donkeyrentals.com
-Server:  Death-Star
-Address:  192.168.1.1
+Server:		192.168.128.1
+Address:	192.168.128.1#53
 
 Non-authoritative answer:
-Name:    donkeyrentals.com
-Address:  64.99.80.30
+Name:	donkeyrentals.com
+Address: 104.131.191.2
 ```
 
 The biggest difference with nslookup is the way you use it. Type `nslookup` and hit enter. This brings up what's called interactive mode. You can type commands here without having to type nslookup first. The command prompt here is indicated with `>` instead of `$`. Type `exit` or hit `ctrl-c` to leave this mode and go back to the terminal.
@@ -42,22 +42,22 @@ The `debug` setting can give you a more dig-like response including the question
 ```
 > set debug
 > donkeyrentals.com
-Server:		8.8.4.4
-Address:	8.8.4.4#53
+Server:		192.168.128.1
+Address:	192.168.128.1#53
 
 ------------
     QUESTIONS:
 	donkeyrentals.com, type = A, class = IN
     ANSWERS:
     ->  donkeyrentals.com
-	internet address = 64.99.80.30
-	ttl = 698
+	internet address = 104.131.191.2
+	ttl = 576
     AUTHORITY RECORDS:
     ADDITIONAL RECORDS:
 ------------
 Non-authoritative answer:
 Name:	donkeyrentals.com
-Address: 64.99.80.30
+Address: 104.131.191.2
 ```
 
 To turn this off, type `set nodebug` at the prompt.
@@ -67,12 +67,16 @@ To turn this off, type `set nodebug` at the prompt.
 ```
 > set type=ns
 > donkeyrentals.com
-Server:  google-public-dns-b.google.com
-Address:  8.8.4.4
+Server:		192.168.128.1
+Address:	192.168.128.1#53
 
 Non-authoritative answer:
-donkeyrentals.com       nameserver = ns1.hover.com
-donkeyrentals.com       nameserver = ns2.hover.com
+donkeyrentals.com	nameserver = ns1.hover.com.
+donkeyrentals.com	nameserver = ns2.hover.com.
+
+Authoritative answers can be found from:
+ns2.hover.com	internet address = 64.98.148.13
+ns1.hover.com	internet address = 216.40.47.26
 ```
 
 We `set` the `type` to `ns`, or `cname`, or `mx` or any of the other types. We can use `set type=` again to set it to a different type.
@@ -83,15 +87,15 @@ We can set the server, similarly to how we specify a server with dig:
 
 ```shell
 > server ns1.hover.com
-Default Server:  ns1.hover.com
-Address:  216.40.47.26
+Default server: ns1.hover.com
+Address: 216.40.47.26#53
 
 > donkeyrentals.com
-Server:  ns1.hover.com
-Address:  216.40.47.26
+Server:		ns1.hover.com
+Address:	216.40.47.26#53
 
-Name:    donkeyrentals.com
-Address:  64.99.80.30
+donkeyrentals.com	nameserver = ns1.hover.com.
+donkeyrentals.com	nameserver = ns2.hover.com.
 ```
 
 This attempts to query a nameserver directly instead of using cached information.
@@ -102,11 +106,11 @@ This one is super simple, just enter the ip address:
 
 ```shell
 > 66.220.156.2
-Server:  google-public-dns-b.google.com
-Address:  8.8.4.4
+Server:		192.168.128.1
+Address:	192.168.128.1#53
 
-Name:    edge-star-shv-07-ash4.facebook.com
-Address:  66.220.156.2
+Non-authoritative answer:
+2.156.220.66.in-addr.arpa	name = edge-star-shv-07-ash4.facebook.com.
 ```
 
 So that's nslookup in a nutshell. It can be useful, but I would still avoid it. It's not worth hours of frustration because it interpreted a response wrong or failed when it shouldn't have. Stick to dig if you can.
