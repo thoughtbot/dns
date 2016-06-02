@@ -19,7 +19,7 @@ When we want to test our setup, if we're lucky, our DNS provider will let us ask
 ```shell
 $ dig donkeyrentals.com ALIAS +short
 
-82.144.121.97
+104.131.191.2
 ```
 
 But again, these are _non-standard_ record types, so we may have to result to alternate methods:
