@@ -46,7 +46,7 @@ The mail server first tries the record with the lowest priority on the list, `gm
 ```
 $ dig gmail-smtp-in.l.google.com A +short
 
-173.194.68.26
+173.194.205.27
 ```
 
 Then it tries to send the email data. If it fails, it moves on to the item with the next server `alt1.gmail-smtp-in.l.google.com.` which is next lowest priority. The mail server tries server after server until one succeeds or they all fail.
