@@ -14,18 +14,18 @@ $ dig donkeyrentals.com
 ; <<>> DiG 9.8.3-P1 <<>> donkeyrentals.com
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 2640
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26538
 ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 
 ;; QUESTION SECTION:
 ;donkeyrentals.com.		IN	A
 
 ;; ANSWER SECTION:
-donkeyrentals.com.	900	IN	A	64.99.80.30
+donkeyrentals.com.	842	IN	A	104.131.191.2
 
-;; Query time: 146 msec
-;; SERVER: 208.67.222.222#53(208.67.222.222)
-;; WHEN: Wed Oct 21 11:31:04 2015
+;; Query time: 7 msec
+;; SERVER: 192.168.128.1#53(192.168.128.1)
+;; WHEN: Thu Jun  2 10:16:46 2016
 ;; MSG SIZE  rcvd: 51
 ```
 
@@ -53,19 +53,19 @@ $ dig message.donkeyrentals.com TXT
 ; <<>> DiG 9.8.3-P1 <<>> message.donkeyrentals.com TXT
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55675
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50384
 ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 
 ;; QUESTION SECTION:
 ;message.donkeyrentals.com.	IN	TXT
 
 ;; ANSWER SECTION:
-message.donkeyrentals.com. 900	IN	TXT	"Hello"
+message.donkeyrentals.com. 900	IN	TXT	"Welcome to Donkey Rentals!"
 
-;; Query time: 35 msec
-;; SERVER: 208.67.222.222#53(208.67.222.222)
-;; WHEN: Fri Oct 23 15:13:51 2015
-;; MSG SIZE  rcvd: 61
+;; Query time: 22 msec
+;; SERVER: 192.168.128.1#53(192.168.128.1)
+;; WHEN: Thu Jun  2 10:17:36 2016
+;; MSG SIZE  rcvd: 82
 ```
 
 Hidden in the response here, we can see the TXT record ("Hello") we added in the previous chapter. Any of the other record types we talked about there are available too.
@@ -77,7 +77,7 @@ Up until this chapter, I've been using dig with the `+short` query option to jus
 ```shell
 $ dig +short donkeyrentals.com
 
-64.99.80.30
+104.131.191.2
 ```
 
 _What order these options come in [does matter](http://serverfault.com/questions/431080/dig-show-only-answer#comment-462136). Always put the query option before the domain we're querying for. I've seen some wacky output sometimes the query option comes later._
@@ -101,7 +101,7 @@ Dig has a query option called `+noall` which as we might expect, turns off all o
 ```shell
 $ dig +noall +answer donkeyrentals.com A
 
-donkeyrentals.com.	900	IN	A	64.99.80.30
+donkeyrentals.com.	900	IN	A	104.131.191.2
 ```
 
 #### Records without the cache
@@ -115,7 +115,7 @@ $ dig @ns1.hover.com donkeyrentals.com A
 ; (1 server found)
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30822
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44948
 ;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 ;; WARNING: recursion requested but not available
 
@@ -123,11 +123,11 @@ $ dig @ns1.hover.com donkeyrentals.com A
 ;donkeyrentals.com.		IN	A
 
 ;; ANSWER SECTION:
-donkeyrentals.com.	900	IN	A	64.99.80.30
+donkeyrentals.com.	900	IN	A	104.131.191.2
 
-;; Query time: 68 msec
+;; Query time: 41 msec
 ;; SERVER: 216.40.47.26#53(216.40.47.26)
-;; WHEN: Mon Oct 26 12:57:08 2015
+;; WHEN: Thu Jun  2 10:19:58 2016
 ;; MSG SIZE  rcvd: 51
 ```
 
@@ -170,9 +170,9 @@ $ dig +short -f dig.txt
 So far, we have been looking up domain names to get their IP addresses, but can we do this in the other direction? We can indeed. This is what the `-x` flag is for:
 
 ```shell
-$ dig -x 66.220.156.2
+$ dig +short -x 66.220.156.2
 
-2.156.220.66.in-addr.arpa. 2360	IN	PTR	edge-star-shv-07-ash4.facebook.com.
+edge-star-shv-07-ash4.facebook.com.
 ```
 
 This returns a PTR record. We didn't cover these in the last chapter because we don't ever get to actually configure them. Briefly, PTR stands for pointer and they _point_ back to the original domain. In this case, we can see that it's a server at `facebook.com`.
