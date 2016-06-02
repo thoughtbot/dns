@@ -47,7 +47,7 @@ I also use the command line tool `dig` liberally throughout the book, as it's ex
 ```
 $ dig example.com +short
 
-93.184.216.34
+104.131.191.2
 ```
 
 Note that you most definitely can leave off the `+short` part if you want the full, lengthy response from `dig`.
