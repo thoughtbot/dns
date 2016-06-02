@@ -52,7 +52,7 @@ Of course, sometimes we do want a little more information that just a sentence. 
 $ host -v donkeyrentals.com
 
 Trying "donkeyrentals.com"
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 22092
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49015
 ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 
 ;; QUESTION SECTION:
@@ -61,29 +61,33 @@ Trying "donkeyrentals.com"
 ;; ANSWER SECTION:
 donkeyrentals.com.	900	IN	A	104.131.191.2
 
-Received 51 bytes from 192.168.128.1#53 in 60 ms
+Received 51 bytes from 192.168.128.1#53 in 37 ms
 Trying "donkeyrentals.com"
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42301
-;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 65416
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 
 ;; QUESTION SECTION:
 ;donkeyrentals.com.		IN	AAAA
 
-;; AUTHORITY SECTION:
-donkeyrentals.com.	900	IN	SOA	ns1.hover.com. dnsmaster.hover.com. 1443031204 10800 3600 604800 900
+;; ANSWER SECTION:
+donkeyrentals.com.	900	IN	AAAA	2620:0:861:ed1a::1
 
-Received 91 bytes from 192.168.128.1#53 in 50 ms
+Received 63 bytes from 192.168.128.1#53 in 35 ms
 Trying "donkeyrentals.com"
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 21023
-;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 44277
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 2
 
 ;; QUESTION SECTION:
 ;donkeyrentals.com.		IN	MX
 
-;; AUTHORITY SECTION:
-donkeyrentals.com.	900	IN	SOA	ns1.hover.com. dnsmaster.hover.com. 1443031204 10800 3600 604800 900
+;; ANSWER SECTION:
+donkeyrentals.com.	900	IN	MX	10 aspmx.l.google.com.
 
-Received 91 bytes from 192.168.128.1#53 in 59 ms
+;; ADDITIONAL SECTION:
+aspmx.l.google.com.	35	IN	A	209.85.201.27
+aspmx.l.google.com.	267	IN	AAAA	2607:f8b0:400d:c04::1a
+
+Received 110 bytes from 192.168.128.1#53 in 38 ms
 ```
 
 Wait a second, this looks very familiar. In fact it looks like they're just using `dig`! That makes some sense because again, the same company developed both. In this case, we could probably just stick to `dig`, but it's good to know we have this option if we want it.
