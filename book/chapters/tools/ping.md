@@ -1,6 +1,6 @@
 ## ping & ping6
 
-`ping` (and its sibling for IPv6 addresses, `ping6`) is a very simple tool, so this will be a short section. Its most common use case can be summed up as: "Are you there?" While simple, this utility is useful in automated environments. Computers check to make sure other computers are awake, active, and receiving connections.
+`ping` (and its sibling for IPv6 addresses, `ping6`) is a very simple tool, so this will be a short section. Its most common use case can be summed up as: "Are you there?" Although simple, this utility is useful in automated environments. Computers check to make sure other computers are awake, active, and receiving connections.
 
 Its command line interface looks like this:
 
@@ -27,7 +27,7 @@ $ ping6 2620:0:861:ed1a::1
 ...
 ```
 
-It will run forever unless instructed to stop by typing the `CTRL-C` interrupt character. To limit the number of times it runs before running the command, we use the `-c` flag to set the "count" of times it checks:
+It will run forever unless instructed to stop by typing the `CTRL-C` interrupt character. To limit the number of times it runs, we use the `-c` flag to set a "count":
 
 ```
 $ ping -c 5 donkeyrentals.com
@@ -35,9 +35,9 @@ $ ping -c 5 donkeyrentals.com
 ...
 ```
 
-We can mostly ignore the details of the response as they're not particularly important to us. If we run `ping` for an extended period of time, the statistics at the bottom have useful information. Included are percentage of packets lost, and combined times that each request took.
+We can mostly ignore the details of the response as they're not particularly important to us. If we run `ping` for an extended period of time, the statistics at the bottom have useful information. Included are percentage of packets lost and combined times that each request took.
 
-But mostly what we're looking for either a successful response:
+But mostly what we're looking for is either a successful response:
 
 ```
 64 bytes from 104.131.191.2: icmp_seq=0 ttl=55 time=15.031 ms

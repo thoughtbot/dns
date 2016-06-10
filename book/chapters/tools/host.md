@@ -1,6 +1,6 @@
 ## host
 
-`host` is kind of like a simplified version of `dig`. In fact, it's developed by the [same company](https://www.isc.org) that makes `dig` and `nslookup`. This will be a quick section since there's not much to the `host` tool, but it's a nice thing to have if you are looking for friendlier responses. Let me show you what I mean:
+`host` is kind of like a simplified version of `dig`. In fact, it's developed by the [same company](https://www.isc.org) that makes `dig` and `nslookup`. This will be a quick section since there's not much to the `host` tool, but it's a nice thing to have if you are looking for friendlier responses. Here's what I mean:
 
 ```shell
 $ host donkeyrentals.com
@@ -8,7 +8,7 @@ $ host donkeyrentals.com
 donkeyrentals.com has address 104.131.191.2
 ```
 
-Hard to be more friendly than that. That's the A record for `donkeyrentals.com` in simple english words. It can even interpret more complex responses:
+Hard to be more friendly than that. That's the A record for `donkeyrentals.com` in simple English words. It can even interpret more complex responses:
 
 ```shell
 $ host facebook.com
@@ -20,7 +20,7 @@ facebook.com mail is handled by 10 msgin.vvv.facebook.com.
 
 ### Types
 
-Of course if we need to look up something other than A records, we can specify type with the `-t` option:
+Of course, if we need to look up something other than A records, we can specify type with the `-t` option:
 
 ```shell
 $ host -t CNAME www.donkeyrentals.com
@@ -34,7 +34,7 @@ donkeyrentals.com name server ns1.hover.com.
 donkeyrentals.com name server ns2.hover.com.
 ```
 
-### Reverse lookups
+### Reverse Lookups
 
 `host` can also do reverse IP lookups just like dig:
 
@@ -44,9 +44,9 @@ $ host -i 173.252.120.68
 68.120.252.173.in-addr.arpa domain name pointer edge-star-mini-shv-12-frc3.facebook.com.
 ```
 
-### A little more info
+### A Little More Info
 
-Of course, sometimes we do want a little more information that just a sentence. The `-v` option is helpful here:
+Sometimes we do want a little more information than just a sentence. The `-v` option is helpful here:
 
 ```shell
 $ host -v donkeyrentals.com
@@ -90,10 +90,10 @@ aspmx.l.google.com.	267	IN	AAAA	2607:f8b0:400d:c04::1a
 Received 110 bytes from 192.168.128.1#53 in 38 ms
 ```
 
-Wait a second, this looks very familiar. In fact it looks like they're just using `dig`! That makes some sense because again, the same company developed both. In this case, we could probably just stick to `dig`, but it's good to know we have this option if we want it.
+Wait a second! This looks very familiar. In fact, it looks like they're just using `dig`! That makes some sense because, again, the same company developed both. In this case, we could probably just stick with `dig`, but it's good to know we have this option if we want it.
 
-### Why I chose `dig` instead
+### Why I Chose `dig` Instead
 
-So I like `host` enough to include a section about it. It feels nice to use sometimes when you want a quick answer, but I feel like `dig` gives us information that is more authentic. It shows us in the response itself that something is an A record, or a CNAME, or NS, etc. This book is about learning those concepts so it made the most sense to use `dig`. It's also the tool I see most used online in guides, tutorials, and question and answer sites. I hope familiarity with `dig` will help you continue to learn on your own after this book.
+So, I like `host` enough to include a section about it. It feels nice to use sometimes when you want a quick answer, but I believe `dig` gives us more authentic information. It shows us in the response itself that something is an A record, or a CNAME, or NS, etc. This book is about learning those concepts, so it made the most sense to use `dig`. It's also the tool I see most used online in guides, tutorials, and Q&A sites. I hope familiarity with `dig` will help you continue to learn on your own after using this book.
 
-But `host` does pop up from time to time and it can be a really nice alternative for something quick, but only when you first understand what it's telling you. `donkeyrentals.com has address 104.131.191.2` may look nice, but it doesn't give us a lot of information to work with.
+However, `host` does pop up from time to time, and it can be a really nice alternative for something quick, but only when you first understand what it's telling you. `donkeyrentals.com has address 104.131.191.2` may look nice, but it doesn't give us a lot of information to work with.
