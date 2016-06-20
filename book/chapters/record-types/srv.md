@@ -18,7 +18,7 @@ Less briefly: If a service has more than one SRV record for primary and backup s
 
 **Weight** is similar, but works differently. Just like priority, it's a number between 0 and 65535. Instead of a server getting used before another, the load will spread out according to the weight value. Weight only applies when there are two or more SRV records with the same priority.
 
-Imagine we have two containers of different sizes for collecting water. They're both perfectly fine containers that we can use at the same time (same priority) but `bucket` is twice the size of `cup`. When we fill them both to capacity, we'll put two drops of water in `bucket` for every drop we put in `cup`. So the **weight** for `bucket` will be `2` and `cup` will be `1`. This is how weights in SRV records work, except instead of drops of water, it's connections to the server. (Water is not great for servers.)
+Imagine we have two containers of different sizes for collecting water, a bucket and a cup. They're both perfectly fine containers that we can use at the same time (same priority) but `bucket` is twice the size of `cup`. When we fill them both to capacity, we'll put two drops of water in `bucket` for every drop we put in `cup`. So the **weight** for `bucket` will be `2` and `cup` will be `1`. This is how weights in SRV records work, except instead of drops of water, it's connections to the server. (Water is not great for servers.)
 
 Ok, _now_ we can set up our SRV record:
 
