@@ -24,7 +24,7 @@ See the section on ALIAS or ANAME records for more information.
 
 **ANAME Record**
 
-See _Alias Record_
+See _ALIAS Record_
 
 **Apex Domain**
 
@@ -87,7 +87,7 @@ But some malicious registrars will actually register the domain after it's been 
 
 **FQDN**
 
-A fully qualified domain name, which contains all _hostnames_ (including the root zone) combined and separated with a period. Since the root zone does not have any text associated with it like `com`, a FQDN ends with a period. Example: 
+A fully qualified domain name, which contains all _hostnames_ (including the root zone) combined and separated with a period. Since the root zone does not have any text associated with it like `com`, a FQDN ends with a period. Example:
 
 `shop.donkeyrentals.com.`
 

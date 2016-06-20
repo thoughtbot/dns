@@ -4,9 +4,9 @@ Occasionally, we'll need to use a CNAME record to redirect our domain elsewhere,
 
 We all know by this point that CNAMEs can't be used on the apex domain, so we're stuck using a subdomain. The common choice is certainly `www`, but, as previously established, maybe that's not what we want.
 
-### Alias/ANAME
+### ALIAS/ANAME
 
-If our DNS provider offers Alias or ANAME records, that's probably our best option. I'm not a huge fan of these because they are non-standard records, but sometimes they're our only choice.
+If our DNS provider offers ALIAS or ANAME records, that's probably our best option. I'm not a huge fan of these because they are non-standard records, but sometimes they're our only choice.
 
 On the upside, they are simple to configure:
 
