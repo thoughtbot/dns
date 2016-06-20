@@ -44,7 +44,7 @@ Many registrars offer features beyond domain name administration. Some offer ema
 
 Most of these options are personal preferences, but none of them are critical. It's hard to know exactly what you'll need in the future, but this gives you an idea of what to look for as you research.
 
-If you're a bit overwhelmed now and just want a suggestion, here are some of my favorites: [TODO: relevant FAQ/appendix list of registrars]
+If you're a bit overwhelmed now and just want a suggestion, [here are some of my favorites](#recommended-registrars).
 
 ### Step Three – Lease the Domain
 

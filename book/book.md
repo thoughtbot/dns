@@ -114,6 +114,8 @@
 
 <<[chapters/appendix/windows-pkg-mgmt.md]
 
+<<[chapters/appendix/registrars.md]
+
 # Conclusion
 
 <<[chapters/conclusion/afterword.md]
