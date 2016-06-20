@@ -35,7 +35,7 @@ $ dig +short _minecraft._tcp.play.donkeyrentals.com SRV
 1 1 9000 play.donkeyrentals.com.
 ```
 
-Note the `play` in the **Hostname** relates to the `play` in the **Value**. It isn't always the case that these match up, but it's common. The important part is whatever users type to get to your server (e.g. `play.donkeyrentals.com`), the first part must match up to the last part of the **Hostname**.
+Note the `play` in the **Hostname** relates to the `play` in the **Value**. Whatever users type to get to your server (e.g. `play.donkeyrentals.com`), the first part must match up to the last part of the **Hostname**.
 
 In this example, I chose `1` for the **Priority** and **Weight** because, when we only have one server, it doesn't matter which one gets picked first or how often it's used.
 
