@@ -58,7 +58,7 @@ After signing up for an account, entering the credit card info, and agreeing to 
 
 We may not want to put sensitive information on the internet, which is understandable. We could use non-personal email addresses, PO boxes, and fake phone numbers, but those sound like a lot of work for a simple domain name. Many registrars offer a service called WHOIS Privacy that lists obscuring information such as _their_ contact info instead. This can be a nice alternative, but the same info can also be used to determine who has rights to a domain, so if our info isn't there, it can be harder to prove that we own it.
 
-In one case, a registry shut down because its owner spent thousands of dollars of customer money on liposuction, escorts, and a chihuahua. As ridiculous as this sounds, customers who had WHOIS Privacy enabled couldn't prove that they had rights to their domains as the site slowly imploded. This is a worst case scenario, but it's important to be aware of the potential tradeoffs of WHOIS privacy.
+In one case, a registry shut down because its owner spent thousands of dollars of customer money on [liposuction, Escalades, and a Miami Penthouse](https://web.archive.org/web/20120421215616/http://www.businessweek.com/technology/content/mar2007/tc20070309_245992.htm). As ridiculous as this sounds, customers who had WHOIS Privacy enabled couldn't prove that they had rights to their domains as the site slowly imploded. This is a worst case scenario, but it's important to be aware of the potential tradeoffs of WHOIS privacy.
 
 ### Next Steps
 
