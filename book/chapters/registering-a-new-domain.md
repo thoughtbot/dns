@@ -14,7 +14,7 @@ $ whois donkeyrentals.com
 
 Using the command line tool isn't the only way. We can also use [Internic's WHOIS service](http://www.internic.net/whois.html), a site that continues to hold strong to the design aesthetic of the early 1990s. The only caveat of the service is it only supports certain domains, mostly the more common ones such as `.com`, `.net`, and `.org`.
 
-From now on, I'm not going to use the period for common domains since it's hard to read and isn't technically accurate, so you'll see `com`, `net`, etc. instead. If you're curious about this, check out [TODO: relevant FAQ/appendix to be written].
+From now on, I'm not going to use the period for common domains since it's hard to read and isn't technically accurate, so you'll see `com`, `net`, etc. instead.
 
 If `donkeyrentals.com` is taken, we need to look for a different domain, so let's try `donkeyrentals.dentist` instead. If we're trying to retrieve WHOIS information for a domain that Internic doesn't support, we have to use a special WHOIS server. So we go to the [Root Zone Database](https://www.iana.org/domains/root/db), find the top-level domain we're looking for, and see if they have a WHOIS server. For this step, I [looked up](https://www.iana.org/domains/root/db/dentist.html) the whois server for `dentist` domains and found `whois.rightside.co`. We can either visit that site to look up our domain, or we can use the `whois` tool with the `-h` option:
 
