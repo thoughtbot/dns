@@ -48,7 +48,7 @@ If you're a bit overwhelmed now and just want a suggestion, here are some of my 
 
 ### Step Three – Lease the Domain
 
-The price for a single domain ranges from free all the way up to $100+/year. Some registrars charge monthly for other niceties. There's no standard, so they can charge (or not charge) whatever they want. There are some commonalities among registrars, however. Long-existing domains like `com`, `net`, and `org` are usually pretty cheap--around $10--while newer or specialized domains such as `luxury` and `loans` generally cost more, just like their real-world counterparts.
+The price for a single domain ranges from free all the way up to $100+/year. Some registrars charge monthly for other niceties like [WHOIS privacy](#privacy-vs-legal-concerns), email, or website hosting. There's no standard, so they can charge (or not charge) whatever they want. There are some commonalities among registrars, however. Long-existing domains like `com`, `net`, and `org` are usually pretty cheap--around $10--while newer or specialized domains such as `luxury` and `loans` generally cost more, just like their real-world counterparts.
 
 ### Step Four – Complete WHOIS Information
 
