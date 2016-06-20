@@ -24,7 +24,7 @@ $ openssl version
 OpenSSL 1.0.2g  1 Mar 2016
 ```
 
-If we get something back that says `command not found`, then the package is not installed. If that's the case, our package manager (yum, rpm, apt, dpkg, etc.) should be able to install them for us.
+If we get something back that says `command not found`, then the package is not installed. If that's the case, our [package manager](#installing-tools) (yum, brew, apt, choco, etc.) should be able to install them for us.
 
 ### Combine the Certificates
 

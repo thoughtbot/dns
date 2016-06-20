@@ -32,7 +32,7 @@ $ openssl version
 OpenSSL 1.0.2g  1 Mar 2016
 ```
 
-If we get something back like `openssl: command not found`, then we don't have it installed. If these are missing, our package manager (yum, rpm, apt, dpkg, etc.) should be able to install them for us.
+If we get something back like `openssl: command not found`, then we don't have it installed. If these are missing, our [package manager](#installing-tools) (yum, brew, apt, choco, etc.) should be able to install them for us.
 
 Finally, you'll need to know where your Apache config files are. They are commonly in the `/etc/httpd` directory. If they're not there, a good way to find them on Linux systems is the following command:
 
