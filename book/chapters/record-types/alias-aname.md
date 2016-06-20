@@ -6,7 +6,7 @@ These records are a special case because, as of this writing, very few DNS provi
 
 [DNSimple](http://support.dnsimple.com/articles/alias-record/) is using TXT records to point apex domains just like a CNAME does. They call this an ALIAS record. [DNS Made Easy](http://help.dnsmadeeasy.com/managed-dns/records/aname-records/) has a similar feature called ANAMEs. I want to stress again that these are _non-standard_ uses of DNS technology only available through limited DNS providers. Each providers' implementation is entirely different. They make me nervous.
 
-Even so, they can be useful. For example, I mentioned that [Heroku](https://devcenter.heroku.com/articles/custom-domains#add-a-custom-root-domain) makes use of this feature to let us point our apex domain at our Heroku app.
+Even so, they can be useful. For example, I mentioned that [Heroku](https://devcenter.heroku.com/articles/custom-domains#add-a-custom-root-domain) instructs customers to use these records so an apex domain can point toward a Heroku app.
 
 Since these aren't the same across the board, I can't promise this is how we'll have to set one up. But it will likely work something like this:
 
