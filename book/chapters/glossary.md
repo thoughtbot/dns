@@ -89,7 +89,9 @@ But some malicious registrars will actually register the domain after it's been 
 
 A fully qualified domain name, which contains all _hostnames_ (including the root zone) combined and separated with a period. Since the root zone does not have any text associated with it like `com`, a FQDN ends with a period. Example:
 
-`shop.donkeyrentals.com.`
+```
+shop.donkeyrentals.com.
+```
 
 **gTLD**
 
