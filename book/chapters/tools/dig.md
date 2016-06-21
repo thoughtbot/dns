@@ -2,7 +2,7 @@
 
 So far, we've been using the dig command throughout this book to check our DNS handiwork. It stands for Domain Information Groper (ew), and its sole job is to get information about DNS records. This thing is our Swiss Army knife for DNS debugging.
 
-_If you don't have dig installed on your machine, internet nerds have recreated dig's functionality on the web. Search for "dig web interface" and you should find a few tools._
+_If you don't have dig installed on your machine, you can [install it](#installing-tools). If that seems to complicated, internet nerds have recreated dig's functionality on the web. Search for "dig web interface" and you should find a few tools._
 
 ### Dig Basics
 
@@ -80,7 +80,7 @@ $ dig +short donkeyrentals.com
 104.131.191.2
 ```
 
-_What order these options come in [does matter] (http://serverfault.com/questions/431080/dig-show-only-answer#comment-462136). Always put the query option before the domain we're querying for. I've seen some wacky output when the query option comes after the domain._
+_What order these options come in [does matter](http://serverfault.com/questions/431080/dig-show-only-answer#comment-462136). Always put the query option before the domain we're querying for. I've seen some wacky output when the query option comes after the domain._
 
 The [dig manual](http://ftp.isc.org/isc/bind9/cur/9.9/doc/arm/man.dig.html) lists many query options besides `+short` we can look through at our leisure, but for now I'll point out a few of the more useful ones:
 
@@ -192,7 +192,7 @@ In dig responses, we often see `IN` in the response:
 ;donkeyrentals.com.		IN	A
 ```
 
-This doesn't mean "in" like "A records all up **in** ya donkeyrentals" but is short for "Internet". Turns out all records have a class. Other classes are like an entirely separate internet and have nothing to do with this book. For our uses, we are always using the IN (Internet) class. That's also the class that dig defaults to. It can also be CH (Chaos) or HS (Hesiod), but we won't be talking about these no matter how rad they sound.
+This doesn't mean "in" like "A records all up **in** ya donkeyrentals" but is short for "Internet". Turns out all records have a class. Other classes are like an entirely separate internet and have nothing to do with this book. For our uses, we are always using the IN (Internet) class. That's also the class that dig defaults to. It can also be CH ([Chaos](https://en.wikipedia.org/wiki/Chaosnet)) or HS ([Hesiod](https://en.wikipedia.org/wiki/Hesiod_(name_service))), but we won't be talking about these no matter how rad they sound.
 
 #### Why do records get returned in a different order?
 
