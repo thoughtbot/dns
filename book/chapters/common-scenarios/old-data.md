@@ -6,7 +6,7 @@ But that isn't always the case. So what can we do if it's not working?
 
 ### Check the Nameservers
 
-One very common problem is a domain's nameservers are set incorrectly. Remember, the nameservers are like the phonebook and all our other DNS records are like the people listed inside it. If someone is looking in the wrong "phonebook," they won't be able to find the right DNS records.
+One very common problem is a domain's [nameservers](#ns) are set incorrectly. Remember, the nameservers are like the phonebook and all our other DNS records are like the people listed inside it. If someone is looking in the wrong "phonebook," they won't be able to find the right DNS records.
 
 Some web hosts will manage a domain's individual DNS records, and the DNS provider is only responsible for administrative tasks like domain renewal and whois information. In a situation like this, we use the DNS provider to point our domain's NS records toward our web host, and the web host handles all other records.
 
@@ -20,12 +20,12 @@ Then, all other records (A, MX, CNAME, etc.) will be created through Horse Hosti
 
 ### Check the Records With dig
 
-If we think we've set everything up correctly but our website is still not showing the correct data, we can check the records directly using `dig`:
+If we think we've set everything up correctly but our website is still not showing the correct data, we can check the records directly using `dig`.
 
 First, we can check to make sure nameservers are what we expect them to be:
 
 ```shell
-$ dig donkeyrentals.com NS +short
+$ dig +short donkeyrentals.com NS
 
 ns2.horse-hosting.com.
 ns1.horse-hosting.com.
@@ -35,7 +35,7 @@ ns3.horse-hosting.com.
 Then we can check individual records:
 
 ```shell
-dig donkeyrentals.com A +short
+dig +short donkeyrentals.com A
 
 104.131.191.2
 ```
@@ -43,12 +43,12 @@ dig donkeyrentals.com A +short
 We can also check the nameserver directly for any record:
 
 ```shell
-$ dig @ns1.horse-hosting.com donkeyrentals.com A +short
+$ dig +short @ns1.horse-hosting.com donkeyrentals.com A
 
 104.131.191.2
 ```
 
-If these match, it's possible that DNS resolvers around the world haven't updated to the latest set of data yet. This is why we see warnings like "changes may take up to 48 hours."
+If these match but we're not seeing the website in our browser, it's possible that DNS resolvers around the world haven't updated to the latest set of data yet. This is why we see warnings like "changes may take up to 48 hours."
 
 However, if they don't match, that means we may have set the individual DNS records in the wrong place. Looking at the queries above, there are two types: one uses our DNS resolver, while the other queries the nameserver directly.
 

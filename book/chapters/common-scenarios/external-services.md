@@ -8,7 +8,7 @@ Sometimes, services will offer to sell us a domain up front. Obviously, domain e
 
 Connecting a domain that we own usually involves two steps: adding DNS records to point toward the service, then telling the service about the domain.
 
-There are a few different ways to do the first step. The most common technique I've seen is to point an A or CNAME record toward an IP or hostname owned by the service. Sometimes, services force us to switch to their nameservers so they can manage our DNS records. If this is the case, hope that they have good DNS controls if we ever want to set up other subdomains.
+There are a few different ways to do the first step. The most common technique I've seen is to point an A or CNAME record toward an IP or hostname owned by the service. Sometimes, services force us to switch to their nameservers so they can manage our DNS records. If this is the case, hope that they have good DNS controls if we ever want to set up other DNS records.
 
 Next, we tell the service about our domain. Usually, in some control panel, we enter our domain so the service knows what domains to look for. This may take a bit to start working, but it's often immediate.
 
@@ -22,6 +22,6 @@ dig @ns1.example.com donkeyrentals.com
 ...
 ```
 
-A caveat: If we're using the service's nameservers, we need to query those servers instead of our DNS provider's servers. That's where the updated records will be.
+Make sure you're querying the correct servers. If we're using the service's nameservers, we need to query those servers instead of our DNS provider's servers. That's where the updated records will be.
 
-Also, be aware that if we want to use our bare, apex domain, we won't be able to use a CNAME record with the service unless our DNS provider supports ANAME/ALIAS/etc. records. Some services force us to use a CNAME, in which case we'll have to use a subdomain like `www`. We'll explore solutions to this problem later.
+Also, be aware that if we want to use our bare, apex domain, we won't be able to use a CNAME record with the service unless our DNS provider supports [ANAME/ALIAS](#alias-or-aname). records. Some services force us to use a CNAME, in which case we'll have to use a subdomain like `www`. We'll explore solutions to this problem later.

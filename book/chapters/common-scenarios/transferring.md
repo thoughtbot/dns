@@ -30,7 +30,7 @@ Admin Email: admin@donkeyrentals.com
 
 Now we need to request an authorization code from OldCrusty. Hopefully this is just a button we can push somewhere (if not, we may need to email or call OldCrusty support). An email will be sent from OldCrusty to the Administrative contact email address from our WHOIS information. As I said in the last section, WHOIS information needs to be publicly available (WHOIS Privacy turned off), and the Administrative contact email needs to be an email address we can access.
 
-The authorization code, also called EPP (Extensible Provisioning Protocol) code, is a short code that we'll need to enter at ProbablyBetter domains. It looks something like `6sF>X95ZrH`.
+The authorization code, also called EPP ([Extensible Provisioning Protocol](https://en.wikipedia.org/wiki/Extensible_Provisioning_Protocol)) code, is a short code that we'll need to enter at ProbablyBetter domains. It looks something like `6sF>X95ZrH`.
 
 ### Start the Transfer
 
