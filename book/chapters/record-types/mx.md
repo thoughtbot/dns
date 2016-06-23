@@ -15,7 +15,7 @@ Remember, the `@` in the **Hostname** is for the apex domain and has nothing to 
 
 The **record type** (`MX` in this case) should be pretty obvious. We're talking about `MX` records after all.
 
-**Priority** is the same as in SRV records. A lower number means this server will be used before any other server is tried. There can be multiple mail servers for a particular domain. If one server is down or unavailable, it will try the next one in the list.
+**Priority** is the same as in [SRV records](#srv). A lower number means this server will be used before any other server is tried. There can be multiple mail servers for a particular domain. If one server is down or unavailable, it will try the next one in the list.
 
 Finally, the **Value** is the domain name of a server. This configuration might look similar to a CNAME record, but the domain name we point to must be an A or AAAA record, i.e., we can't point an MX record to a CNAME or other type of record. It has to go to a domain that points directly to an IP address.
 
