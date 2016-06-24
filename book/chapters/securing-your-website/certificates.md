@@ -41,7 +41,7 @@ There are three different levels of validation. These levels are representations
 If we don't have email set up for that domain or WHOIS privacy is turned on, there will be no email addresses to send to. In that case, there are usually other ways to validate the domain. For example:
 
 * Put a text file with a very specific name on our web server for that domain. The CA will then check for this text file.
-* Create a DNS record like a CNAME or TXT record that the CA can check for.
+* Create a DNS record like a [CNAME](#cname) or [TXT](#txt) record that the CA can check for.
 
 Both of these low-hassle methods prove that we own the domain.
 

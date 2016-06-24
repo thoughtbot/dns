@@ -48,12 +48,12 @@ This is ever-so-slightly less readable. Most nefarious hackers would see this an
 
 Most of this chapter is about obtaining one of these certificates. In addition, there are some other related topics we'll cover:
 
-* What certificates are and their different types
-* Certificate authorities and how they relate to certificates
-* Information we'll need to correctly set up a certificate
-* Generating a private key and certificate signing request
-* Obtaining a certificate from a certificate authority
-* Installing our certificates with nginx or Apache
+* What [certificates](#certificates) are and their different types
+* [Certificate authorities](#certificate-authorities) and how they relate to certificates
+* [Information we'll need](#be-prepared) to correctly set up a certificate
+* [Generating](#getting-a-certificate) a private key and certificate signing request
+* [Obtaining a certificate](#upload-the-csr) from a certificate authority
+* Installing our certificates with [nginx](#installing-a-certificate-for-nginx) or [Apache](#installing-a-certificate-for-apache)
 
 Let's get started!
 
