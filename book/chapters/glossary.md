@@ -5,7 +5,7 @@ An A record or _address record_ is a DNS record type that points a hostname to a
 * **Hostname**: `www`
 * **IP Address**: `12.34.56.78`
 
-See the section on A records to learn more.
+See the section on [A records](#a) to learn more.
 
 **AAAA Record**
 
@@ -14,17 +14,17 @@ An AAAA record or _quad-A record_ is a DNS record type that points a hostname to
 * **Hostname**: `www`
 * **IP Address**: `2620:0:861:ED1A::1`
 
-Note that this IP address example is shortened. See the section on AAAA records to learn more about shortened IPv6 addresses.
+Note that this IP address example is shortened. See the section on [AAAA records](#aaaa) to learn more about shortened IPv6 addresses.
 
 **ALIAS Record**
 
 A non-standard record type first used at [DNSimple](https://support.dnsimple.com/articles/alias-record/). It allows CNAME-like redirections on the apex domain, which is not normally allowed. For example, `donkeyrentals.com` could point to `myapp.herokuapp.com` instead of an IP address. Normally, this would need to be done with `www.donkeyrentals.com`.
 
-See the section on ALIAS or ANAME records for more information.
+See the section on [ALIAS or ANAME records](#alias-or-aname) for more information.
 
 **ANAME Record**
 
-See _ALIAS Record_
+See _ALIAS Record_.
 
 **Apex Domain**
 
@@ -48,6 +48,8 @@ See also: _TLD_.
 
 Companies that issue certificates. This is where you go to upload a certificate signing request (CSR) and get back a certificate. Examples of these are Comodo, DigiCert, and RapidSSL.
 
+See the section on [certificate authorities](#certificate-authorities) for more information.
+
 **CNAME Record**
 
 Cannonical Name records or _CNAME records_ are a DNS record type that point a hostname to a domain name, as opposed to an IP address. Example:
@@ -56,6 +58,8 @@ Cannonical Name records or _CNAME records_ are a DNS record type that point a ho
 * **Target Host**: `rabbitrentals.com`
 
 Note: These cannot be used on the Apex Domain. In the example above, this would point `redirect.donkeyrentals.com` to `rabbitrentals.com`. You cannot use a CNAME to point `donkeyrentals.com` in the same way.
+
+See the section on [CNAME records](#cname) for more information.
 
 **Common Name**
 
@@ -75,15 +79,17 @@ Dig is included in the _BIND_ suite of software DNS utilities. It is similar to 
 
 See also: _BIND_, _host_, _nslookup_.
 
+See the section on [dig](#dig) for more information.
+
 **DNS**
 
-Short for (the) Domain Name System, the whole network of servers holding records that point to other records or servers. See the rest of this book for more information.
+Short for (the) Domain Name System, the whole network of servers holding records that point to other records or servers. See the [rest of this book](#introduction) for more information.
 
 **Domain Name Front Running**
 
 Often, registrar websites will let you search to see if a domain is already taken. You type in the domain name and the registrar says, "Taken, sorry." or "It's available! Would you like to register?" If you choose not to register, this domain name should just continue being unregistered until a customer comes along and grabs it.
 
-But some malicious registrars will actually register the domain after it's been searched for, then sell it back to you for a higher price. The nerve! This is domain name front running.
+But some [malicious registrars](#step-one-figure-out-if-the-domain-is-already-taken) will actually register the domain after it's been searched for, then sell it back to you for a higher price. The nerve! This is domain name front running.
 
 **FQDN**
 
@@ -111,6 +117,8 @@ It is similar to _dig_ but attempts to have a much more succinct and readable ou
 
 See also: _BIND_, _dig_, _nslookup_.
 
+See the section on [host](#host) for more information.
+
 **Hostname**
 
 Each individual part of a domain. For example, in `food.donkeyrentals.com`, the hostnames are `food`, `donkeyrentals`, and `com`. Putting these together with dots in between creates a domain.
@@ -137,6 +145,8 @@ Some IPv6 addresses can also be shortened significantly, as seen in the second e
 
 An MX record or _mail exchange record_ is used to route email requests to mail servers. It has an additional priority property which allows multiple records for the same hostname to point to different servers and act as a backup. For example, a record with the priority of `10` will be used before a record with the priority of `20`.
 
+See the section on [MX records](#mx) for more information.
+
 **Nameserver**
 
 The server which stores all DNS records for a particular domain. Think of this as a phonebook where DNS records are listed instead of people. You can only find the records you're looking for if you look in the right phonebook.
@@ -159,17 +169,23 @@ A NS record or _nameserver record_ points to the server that holds all other DNS
 
 See also: _Nameserver_.
 
-**PKI**
+**Public-key Infrastructure (PKI)**
 
-Public key infrastructure. The system we (the internet) have agreed on to set up and maintain secure certificates. Kind of like how society decided we should fund the government, so we use the system of taxes. This system is used by browsers, servers, certificate authorities, and more to ensure we all have safe, secure browsing experiences.
+Public-key infrastructure. The system we (the internet) have agreed on to set up and maintain secure certificates. Kind of like how society decided we should fund the government, so we use the system of taxes. This system is used by browsers, servers, certificate authorities, and more to ensure we all have safe, secure browsing experiences.
+
+See the section on [public-key infrastructure](#public-key-infrastructure) for more information.
 
 **Private Key**
 
 A long, unique string of random looking numbers and letters that represents someone or something. Maybe that thing is a server, a website, or your computer. Imagine a physical lock and a key. In public key encryption, the _public key_ is the lock, and the _private key_ is the key. Confusing terms, yes, but that's more or less how it works. Never give your private key out or make it visible to the world.
 
+See the section on [public-key infrastructure](#public-key-infrastructure) for more information.
+
 **Public Key**
 
 As opposed to a _private key_, this is a different long, unique string of random-looking numbers and letters that represents someone or something. Feel free to give this out to anyone; it does not have to be private. Putting this somewhere else (like a server) usually gives you access, so long as you have the matching _private key_.
+
+See the section on [public-key infrastructure](#public-key-infrastructure) for more information.
 
 **Public-key Encryption**
 
@@ -179,6 +195,8 @@ See _Public-key Cryptography_
 
 The system for creating private and public keys. Imagine some crazy math that can take input like `admin@donkeyrentals.com` and spit out two files of garbage (public and private key). We use these keys as a form of security, which works well even if we don't understand the crazy algorithms behind encryption.
 
+See also: _Public-key Infrastructure_
+
 **Quad-A Record**
 
 See _AAAA Record_
@@ -187,9 +205,13 @@ See _AAAA Record_
 
 A tool that makes a simple request to a server with an IPv4 address and returns how long that request took (among other things). It's a useful tool for checking to see if a server is up because, if the server is down, it will respond saying the ping timed out.
 
+See the section on [ping](#ping-ping6) for more information.
+
 **ping6**
 
 Just like its sibling _ping_, but uses IPv6 addresses instead.
+
+See also: _ping_
 
 **Registrar**
 
@@ -225,13 +247,17 @@ An SRV record or _service record_ is used to make a specific connection to an IP
 
 SRV records also offer two other attributes: priority and weight. When multiple requests are made to the service, they are sent to servers with lower-numbered priority first. When multiple servers have the same priority, requests are distributed across them according to their weight.
 
+See the section on [SRV records](#srv) for more information.
+
 **SSL**
 
 Secure Sockets Layer. This protocol was replaced by _TLS_ (Transport Layer Security) but is still commonly referred to when speaking about secure certificates. Thanks everyone for making it so confusing.
 
+See the chapter on [securing your website](#securing-your-website) for more information.
+
 **Subdomain**
 
-A domain that is part of another domain. For example, `shop.donkeyrentals.com` is a subdomain of `donkeyrentals.com`, which is a subdomain of `com`. A subdomain is also technically a domain, and all domains (except for the root zone) are technically subdomains. Use subdomain when talking specifically about a domain that is defined by its parent domain.
+A domain that is part of another domain. For example, `shop.donkeyrentals.com` is a subdomain of `donkeyrentals.com`, which is a subdomain of `com`. A subdomain is also technically a domain, and all domains (except for the root zone) are technically subdomains. Use subdomain when talking specifically about a domain that is defined by its parent domain:
 
 > Welcome to donkeyrentals.com! Visit our shop at the subdomain shop.donkeyrentals.com.
 
@@ -256,6 +282,8 @@ Text records are for storing arbitrary data with a hostname. Example:
 
 This may seem like a trivial example, and it is. However, real-world use cases do exist, such as verifying an email server or providing proof of ownership for a TLS record.
 
+See the section on [TXT records](#txt) for more information.
+
 **WHOIS**
 
 A protocol and tool that retrieves information about who is in control of a domain name. Confusingly, the protocol (WHOIS) and the tool (`whois`) are different; `whois` uses the WHOIS protocol to get domain information.
@@ -266,8 +294,12 @@ Basic usage:
 $ whois donkeyrentals.com
 ```
 
+See the section on [whois](#whois) for more information.
+
 **X.509**
 
 X.509 is a list of standards that specify public key certificates, certificate revocation lists, attribute certificates, and a certification path validation algorithm. It's like being in a secret club, but, instead of building a treehouse, you agree to use certain methods to create and structure certificates and how to communicate with certificate authorities. TLS/SSL uses X.509 certificates.
 
 This is in contrast to a model such as PGP, where you get together with all your nerdy friends and sign each other's certificates. X.509 certificates rely on being signed by global certificate authorities to be valid, among other formatting requirements.
+
+See the section on [securing your website](#securing-your-website) for more information.
