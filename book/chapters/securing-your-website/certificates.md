@@ -36,7 +36,7 @@ After that, the server and the browser set up a secure connection (we'll talk ab
 
 ### Different Levels of Validation
 
-There are three different levels of validation. These levels are representations of how much you have proven to a certificate authority. The first is a simple **domain validated** (or **DV**) certificate. This is by far the simplest and only requires that you prove you have control over a domain. Proof can be obtained when the CA sends an email to an address listed in the domain's `WHOIS` information or sends an email to a common email address like `admin@yourdomain.com` or `webmaster@yourdomain.com`.
+There are three different levels of validation. These levels are representations of how much you have proven to a certificate authority. The first is a simple **domain validated** (or **DV**) certificate. This is by far the simplest and only requires that you prove you have control over a domain. Proof can be obtained when the CA sends an email to an address listed in the domain's WHOIS information or sends an email to a common email address like `admin@yourdomain.com` or `webmaster@yourdomain.com`.
 
 If we don't have email set up for that domain or WHOIS privacy is turned on, there will be no email addresses to send to. In that case, there are usually other ways to validate the domain. For example:
 
