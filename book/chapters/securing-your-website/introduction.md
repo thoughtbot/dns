@@ -28,7 +28,7 @@ User submitted an order with this data:
 ...
 ```
 
-_*This was only a reenactment. No real data was stolen in the making of this example._
+_\*This was only a reenactment. No real data was stolen in the making of this example._
 
 Hackers can see this data flying by and record it. Now they have your credit card number with verification code and everything. No good! In contrast, if you have a secure connection established with TLS, the hacker would see something like this instead:
 
