@@ -68,7 +68,7 @@ message.donkeyrentals.com. 900	IN	TXT	"Welcome to Donkey Rentals!"
 ;; MSG SIZE  rcvd: 82
 ```
 
-Hidden in the response here, we can see the TXT record ("Hello") we added in the previous chapter. Any of the other record types we talked about there are available too.
+Hidden in the response here, we can see the TXT record ("Welcome to Donkey Rentals!") we added in the previous chapter. Any of the other record types we talked about there are available too.
 
 ### Query Options
 
