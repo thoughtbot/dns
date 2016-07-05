@@ -84,17 +84,17 @@ _What order these options come in [does matter](http://serverfault.com/questions
 
 The [dig manual](http://ftp.isc.org/isc/bind9/cur/9.9/doc/arm/man.dig.html) lists many query options besides `+short` we can look through at our leisure, but for now I'll point out a few of the more useful ones:
 
-#### `+trace`
+* `+trace`
 
 At the beginning of this chapter, we talked about how DNS queries travel through a chain of servers before finally getting to our domain. This will illustrate that whole process. Try it!
 
-#### `+noquestion`, `+noanswer`, `+noadditional`, and `+noauthority`
+* `+noquestion`, `+noanswer`, `+noadditional`, and `+noauthority`
 
 Query options can also have `no` at the start to remove some functionality. These query options are all ways to limit the response dig gives back to us. If we never care about the `QUESTION` section, for example, we can simply turn it off and make dig's response much less wordy.
 
 ### Common Use Cases
 
-#### Just the answer section
+### Just the answer section
 
 Dig has a query option called `+noall` that, as we might expect, turns off all output. It's not very useful by itself, but combined with a different query option such as `+answer`, gives us only the sections we want:
 
@@ -104,7 +104,7 @@ $ dig +noall +answer donkeyrentals.com A
 donkeyrentals.com.	900	IN	A	104.131.191.2
 ```
 
-#### Records without the cache
+### Records without the cache
 
 As we know, there's lots of caching involved in DNS. Since all of our DNS records exist on a nameserver, we can ask that nameserver directly and bypass any caching information:
 
@@ -183,7 +183,7 @@ Another anecdote is that the "reverse DNS lookup" database is hosted at `in-addr
 
 ### Curiosities
 
-#### What does the `IN` mean?
+### What does the `IN` mean?
 
 In dig responses, we often see `IN` in the response:
 
@@ -194,13 +194,13 @@ In dig responses, we often see `IN` in the response:
 
 This doesn't mean "in" like "A records all up **in** ya donkeyrentals" but is short for "Internet". Turns out all records have a class. Other classes are like an entirely separate internet and have nothing to do with this book. For our uses, we are always using the IN (Internet) class. That's also the class that dig defaults to. It can also be CH ([Chaos](https://en.wikipedia.org/wiki/Chaosnet)) or HS ([Hesiod](https://en.wikipedia.org/wiki/Hesiod_(name_service))), but we won't be talking about these no matter how rad they sound.
 
-#### Why do records get returned in a different order?
+### Why do records get returned in a different order?
 
 When we ran dig to see all the root servers, they may have come back in a seemingly random order. This is called round-robin DNS. When we get back a list of IP addresses from a DNS query, a domain resolver will generally start with the first address in the list. If the first server doesn't respond, it will pick the next one, and so on.
 
 To make sure one server doesn't take all the heat, DNS providers can change the order in which the records are returned. This helps distribute requests across multiple servers. Not all DNS providers do this, and it's not always done in the same way, but keep an eye out for it.
 
-#### Why does the TTL value change drastically?
+### Why does the TTL value change drastically?
 
 While writing this book, this was a common scenario I ran into:
 

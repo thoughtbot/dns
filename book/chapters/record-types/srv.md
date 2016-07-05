@@ -10,7 +10,7 @@ When defining how users connect to a service, each developer (in this case, Mine
 
 Next, we add the first part of the domain we came up with earlier: `play`. This should not have an underscore and comes right after the protocol: `_minecraft._tcp.play`. Are you ready to set up the DNS record yet? Nope. Too bad! We still have two more things to talk about: **priority** and **weight**.
 
-#### Priority and weight
+### Priority and weight
 
 Briefly: priority chooses one server over another and weight distributes the load between multiple servers.
 

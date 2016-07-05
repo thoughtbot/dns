@@ -30,15 +30,15 @@ We'll fill out our own WHOIS information later on.
 
 Now that we know our domain is available, we need to lease it from a registrar. Picking a registrar is mostly a personal preference, so here's what I look for:
 
-#### Wide selection of top-level domains
+**Wide selection of top-level domains**
 
 With so many top-level domains (TLDs) like `com`, `io`, `co`, and `equipment`, available, we have to make sure our registrar can handle all the domains we might want to register. (If you're looking for business ideas, `donkeyrentals.equipment` sounds quite promising. But I'm just the idea guy, so you'll have to run with it.) Whichever domains we want to register, we need to be able to manage them all from one spot if possible.
 
-#### A nice control panel
+**A nice control panel**
 
 The control panel is where we will spend the most time with a registrar, so it's worth researching. This is super important, but harder to know beforehand if the control panel is good before you sign up with that registrar. Most sites will have a nice landing page, but some may be hiding a crap control behind it. Ideally, we can find screenshots of the control panel or use a demo/trial. There's probably no _perfect_ registrar out there, but if it looks like the registrar has never heard of a web designer, we may have to look elsewhere.
 
-#### Other features
+**Other features**
 
 Many registrars offer features beyond domain name administration. Some offer email, web hosting, or DNS management (which is technically different from domain registration). Some offer one-click configuration to set up your domain with your favorite services. There are even services that just _give_ you a domain for free when you purchase their other services. Others will totally scam you (this is not usually a desired feature).
 
@@ -54,7 +54,7 @@ The price for a single domain ranges from free all the way up to $100+/year. Som
 
 After signing up for an account, entering the credit card info, and agreeing to a terms of service we probably should have read but didn't, we need to enter WHOIS information, including, among other things, a phone number, email, and physical address for administrator, billing, and technical contacts.
 
-#### Privacy vs legal concerns
+### Privacy vs legal concerns
 
 We may not want to put sensitive information on the internet, which is understandable. We could use non-personal email addresses, PO boxes, and fake phone numbers, but those sound like a lot of work for a simple domain name. Many registrars offer a service called WHOIS Privacy that lists obscuring information such as _their_ contact info instead. This can be a nice alternative, but the same info can also be used to determine who has rights to a domain, so if our info isn't there, it can be harder to prove that we own it.
 
