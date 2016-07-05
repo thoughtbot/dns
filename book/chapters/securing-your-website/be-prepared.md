@@ -41,6 +41,6 @@ This is the full domain that we'll be securing. I say "full" because, for a cert
 
 ### A Web Server
 
-This might seem obvious, but the web server that you use matters quite a bit. If you're setting a web server up manually, it's likely that you're using Apache, Nginx, or IIS. Any web server worth using supports TLS certificates. You'll also need access to the configuration files of these web servers.
+This might seem obvious, but the web server that you use matters quite a bit. If you're setting a web server up manually, it's likely that you're using Apache, nginx, or IIS. Any web server worth using supports TLS certificates. You'll also need access to the configuration files of these web servers.
 
 If you're using shared hosting (Dreamhost, Bluehost, etc.) or a service (Tumblr, Squarespace, Shopify, etc.) to host your website, check with that service to make sure they support TLS/SSL and allow you to configure enough of your web server to set up a certificate. Some do, some don't. Some have restrictions on the kinds of certificates you can use or how you use them. Some only let you configure a small part of your web server. I can't give any more advice here than to contact the service or do some very extensive research to find out what the restrictions might be.
