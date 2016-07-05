@@ -52,7 +52,7 @@ See the section on [certificate authorities](#certificate-authorities) for more 
 
 **CNAME Record**
 
-Cannonical Name records or _CNAME records_ are a DNS record type that point a hostname to a domain name, as opposed to an IP address. Example:
+Canonical Name records or _CNAME records_ are a DNS record type that point a hostname to a domain name, as opposed to an IP address. Example:
 
 * **Hostname**: `redirect`
 * **Target Host**: `rabbitrentals.com`
