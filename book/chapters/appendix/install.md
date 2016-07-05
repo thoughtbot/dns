@@ -4,7 +4,7 @@ We will be installing the software used in this book with a package manager. Uni
 
 Think of a package like an application: software written to do a specific set of tasks. The difference is that these packages are almost always used from the command prompt instead of opening up a graphical interface. Installing graphical applications via a package manager is not unheard of, however.
 
-The tools used in this book (`dig`, `host`, `openssl`, `nslookup`, and `whois`) are all available via a package manager. While this is incredibly convenient, it is even _more_ convenient that many of these tools are already installed.
+The [tools](#tools-of-the-trade) used in this book (`dig`, `host`, `openssl`, `nslookup`, and `whois`) are all available via a package manager. While this is incredibly convenient, it is even _more_ convenient that many of these tools are already installed.
 
 From your shell or command prompt, you can use the `which` command to see if a tool is installed:
 
@@ -33,7 +33,7 @@ If the tool is installed, it will return its location on the system. If not, it 
 
 ### Mac and Windows
 
-Neither Mac OS X nor Windows comes with a package manager. Luckily, this is pretty easy to resolve. If you are using either of these systems, check out the _Package Management for Mac OS X_ or _Package Management for Windows_ section before moving on to the next section.
+Neither Mac OS X nor Windows comes with a package manager. Luckily, this is pretty easy to resolve. If you are using either of these systems, check out the [_Package Management for Mac OS X_](#package-management-for-mac-os-x) or [_Package Management for Windows_](#package-management-for-windows) section before moving on to the next section.
 
 ### Installation
 
