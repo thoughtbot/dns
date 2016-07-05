@@ -16,7 +16,9 @@ And one that offers free DV certs:
 
 One thing you'll notice when shopping around is paid certificates are often much more expensive than domain names. For example, the certificate for donkeyrentals.com cost $230.85 for three years, or $76.95 per year. The domain cost $13.17 for one year. Security can be expensive.
 
-That said, there are free alternatives like Let's Encrypt if you only need a DV certificate. "How is Let's Encrypt free?" I hear you asking. Well, they are funded by [a bunch of tech companies](https://letsencrypt.org/sponsors/) to promote the adoption of digital certificates. I'm not head-over-heels for Let's Encrypt yet because they're a bit too new for my taste. Their public beta started in December 2015 (I'm writing this chapter in early 2016), so I'd like to give them some time to prove themselves before I support them whole-heartedly, although from what I've seen so far, the service is very promising.
+That said, there are free alternatives like Let's Encrypt if you only need a DV certificate. "How is Let's Encrypt free?" I hear you asking. Well, they are funded by [a bunch of tech companies](https://letsencrypt.org/sponsors/) to promote the adoption of digital certificates. Let's Encrypt overall looks really great and I've heard many system administrators praise it. Check it out if you're looking for a free option.
+
+For this chapter we're going to be looking at more traditional certificates that are purchased and installed manually.
 
 ### OpenSSL
 
