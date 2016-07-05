@@ -45,7 +45,7 @@ The response breaks down like this:
 
 ### Other Record Types
 
-By default, dig looks up A records for our domain (just the apex domain, not any subdomains) and, as we can see, it returned `64.99.80.30`, the IP address of our apex domain's A record. We can look up other record types as well:
+By default, dig looks up A records for our domain (just the apex domain, not any subdomains) and, as we can see, it returned `104.131.191.2`, the IP address of our apex domain's A record. We can look up other record types as well:
 
 ```shell
 $ dig message.donkeyrentals.com TXT

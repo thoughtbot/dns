@@ -32,7 +32,7 @@ That's how DNS works: each server looks in its database to find out how to get t
 
 ### The Resolver
 
-The piece of software that actually makes these requests is called a DNS resolver. Its job is to turn, or resolve, `donkeyrentals.com` into `64.99.80.30` by taking all the steps above. Tools like dig let us see what the resolver sees so we can confirm our DNS settings.
+The piece of software that actually makes these requests is called a DNS resolver. Its job is to turn, or resolve, `donkeyrentals.com` into `104.131.191.2` by taking all the steps above. Tools like dig let us see what the resolver sees so we can confirm our DNS settings.
 
 Dig lets us act like a resolver. We can see the whole chain of server interactions laid bare, which then lets us see where things are misconfigured. For example, if we're expecting the nameservers for `donkeyrentals.com` to be `ns1.equestrian-domains.com` and they are, in fact, `ns1.bovinian-domains.com`, we have a problem. If we expect `www.donkeyrentals.com` to be a CNAME that points to `donkeyrentals.com`, but it instead points to `buzzfeed.com`, we have a different problem.
 
